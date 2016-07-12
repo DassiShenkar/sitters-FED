@@ -32,7 +32,7 @@ export default class Feed extends React.Component {
 
     loadSittersFromServer() {
         $.ajax({
-            url: 'http://localhost:3000/getAvailableNowSitters',
+            url: 'http://sitters-ws.herokuapp.com/getAvailableNowSitters',
             dataType: 'json',
             success: function (data) {
                 this.setState({sitterData: data});
