@@ -25,9 +25,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/feed.js" afterPath="$PROJECT_DIR$/src/modules/feed.js" />
-    </list>
+    <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="" />
     <ignored path="webpack-heroku.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -859,12 +857,12 @@
       <workItem from="1468187109135" duration="48000" />
       <workItem from="1468265801153" duration="6062000" />
       <workItem from="1468345629949" duration="10210000" />
-      <workItem from="1468360816557" duration="1579000" />
+      <workItem from="1468360816557" duration="1649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28014000" />
+    <option name="totallyTimeSpent" value="28084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
