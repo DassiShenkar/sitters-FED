@@ -1,9 +1,9 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {Router, Route, browserHistory} from 'react-router'
-import Login from './src/modules/Login'
-import Register from './src/modules/Register'
-import Feed from './src/modules/Feed'
+import Login from './src/modules/login'
+import Register from './src/modules/register'
+import Feed from './src/modules/feed'
 
 render((
     <Router history={browserHistory}>
