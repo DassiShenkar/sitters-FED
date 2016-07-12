@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  flex-direction: row;
+  background: #7ad0f8;
+  color: #fff;
+  padding: 96px 5.3% 0px 5.3%;
+}
+
+section {
+  padding: 19px 4%;
+  color: #fff;
+}
+
+section a {
+  font-family: "Avenir-heavy-oblique", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  text-align: end;
+  width: 50%;
+}
+
+.greeting {
+  font-family: "Avenir-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  margin-top: 9px;
+}
+
+.name {
+  font-family: "Avenir-heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+}
+
+img.profile {
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+
+.small-profile {
+  width: 96px;
+  height: 96px;
+}
