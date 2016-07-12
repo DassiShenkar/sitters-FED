@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Sitters</title>
+    <meta charset="utf-8">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+          content="531479800503-6lvg1h8gotm5e80p7vcll0q3hfilbg81.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script>
+    function onSignIn(googleUser) {
+
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+
+        localStorage.name = profile.getName();
+        localStorage.parentEmail = profile.getEmail();
+        localStorage.profilePicture = profile.getImageUrl();
+
+
+        var user;
+        $.ajax({
+            url: 'https://sitters-ws.herokuapp.com/getParentByEmail',
+            dataType: 'json',
+            type: 'post',
+            contentType: 'application/json',
+            data: JSON.stringify({'email': profile.getEmail()}),
+            success: function (data) {
+                if (data.Error) {    // if not registered -> navigate to register
+                    location.replace("register");
+                }
+                else {
+                    location.replace("feed"); // if registered user -> navigate to feed
+                }
+            }.bind(this),
+            error: function (xhr, status, err) { // if sign in failed -> print error msg
+                alert(err.toString());
+            }.bind(this)
+        });
+    }
+</script>
+<script src="/public/bundle.js"></script>
+</body>
+</html>
