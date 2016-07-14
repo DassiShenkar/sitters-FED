@@ -46,14 +46,16 @@ export default class Feed extends React.Component {
 
     render() {
         return (
-            <header>
-                <ProfileImg profilePicture={this.state.parentData.profilePictureURL} username={this.state.parentData.name}/>
-                <section>
-                    <p className="greeting">Hello</p>
-                    <h3 className="name">{this.state.parentData.name}</h3>
-                </section>
-                <SitterList sittersData={this.state.sitterData}/>
-            </header>
+            <div id="feed">
+                <header>
+                    <ProfileImg profilePicture={this.state.parentData.profilePictureURL} username={this.state.parentData.name}/>
+                    <section>
+                        <p className="greeting">Hello</p>
+                        <h3 className="name">{this.state.parentData.name}</h3>
+                    </section>
+                </header>
+                <SitterList id="sitters-available-now" title="available-now" sittersData={this.state.sitterData}/>
+            </div>
         );
     }
 }
