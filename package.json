@@ -7,7 +7,7 @@
   "author": "Dassi Rosen, Arel Gindos",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors --inline --hot",
     "start": "node ./app.js"
   },
   "repository": {

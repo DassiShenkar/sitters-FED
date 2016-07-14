@@ -1,7 +1,13 @@
 import React from 'react';
 
 export default class Register extends React.Component {
+
+    constructor() {
+        super();
+    }
+
+
     render() {
-        return <div>Register</div>
+        return (<div>Register</div>);
     }
 }
