@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfileImg from '../components/ProfileImg';
+import SitterList from '../components/SitterList';
 import '../styles/components/feed.scss';
 
 export default class Feed extends React.Component {
@@ -51,6 +52,7 @@ export default class Feed extends React.Component {
                     <p className="greeting">Hello</p>
                     <h3 className="name">{this.state.parentData.name}</h3>
                 </section>
+                <SitterList sittersData={this.state.sitterData}/>
             </header>
         );
     }
