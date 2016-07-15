@@ -55,16 +55,12 @@ export default class FilterList extends React.Component {
         switch (gender) {
             case "male":
                 this.setState({gender : "male"});
-                console.log(1);
                 break;
             case "female":
                 this.setState({gender : "female"});
-                console.log(2);
                 break;
         }
     }
-
-
 
     onStarClick(name, value) {
         this.setState({rating: value});
@@ -139,6 +135,7 @@ export default class FilterList extends React.Component {
                         </label>
                     </div>
                 </section> : null}
+                <div class="btn btn-primary" onClick={this.props.onFilterChange}>Save filters</div>
             </div>
         );
     }

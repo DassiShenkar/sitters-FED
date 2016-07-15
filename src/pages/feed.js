@@ -70,6 +70,11 @@ export default class Feed extends React.Component {
         this.setState({showFilter : !this.state.showFilter});
     }
 
+    onFilterChange() {
+        console.log("meu");
+    }
+    
+
     render() {
         let available, favorites, topRated;
         if(this.state.availableSitters) {
@@ -96,7 +101,7 @@ export default class Feed extends React.Component {
                         </div>
                     </section>
                 </header>
-                {this.state.showFilter ? <FilterList className="filter"/> : null}
+                {this.state.showFilter ? <FilterList onFilterChange={this.onFilterChange} className="filter"/> : null}
                 {available}
                 {favorites}
                 {topRated}
