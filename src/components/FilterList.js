@@ -1,17 +1,15 @@
 import React from "react";
+import StarRatingComponent from 'react-star-rating-component';
 import '../styles/components/filters.scss';
 
 export default class FilterList extends React.Component {
     constructor() {
         super();
         this.state = {
-            selectedFilter: "availableNow"
-            // availableNow: true,
-            // rating: false,
-            // workingHours: false,
-            // favorites: false,
-            // gender: false,
-            // seeAll: false
+            selectedFilter: "availableNow",
+            rating: 5,
+            workingHours: "mornings",
+            gender: "male"
 
         }
     }
@@ -39,6 +37,39 @@ export default class FilterList extends React.Component {
         }
     }
 
+    onHoursChange(timeOfDay) {
+        switch (timeOfDay) {
+            case "mornings":
+                this.setState({workingHours : "mornings"});
+                break;
+            case "evenings":
+                this.setState({workingHours : "evenings"});
+                break;
+            case "allDay":
+                this.setState({workingHours : "allDay"});
+                break;
+        }
+    }
+
+    onGenderChange(gender) {
+        switch (gender) {
+            case "male":
+                this.setState({gender : "male"});
+                console.log(1);
+                break;
+            case "female":
+                this.setState({gender : "female"});
+                console.log(2);
+                break;
+        }
+    }
+
+
+
+    onStarClick(name, value) {
+        this.setState({rating: value});
+    }
+
     render() {
         return (
             <div className="filter-list" onChange={this.onChange.bind(this)}>
@@ -55,7 +86,7 @@ export default class FilterList extends React.Component {
                 </div>
                 <div>
                     <label htmlFor="working-hours">Working Hours
-                        <input id="available-now" value="available-now" type="radio" name="filter" onChange={this.onChange.bind(this, "workingHours")}/>
+                        <input id="working-hours" value="available-now" type="radio" name="filter" onChange={this.onChange.bind(this, "workingHours")}/>
                     </label>
                 </div>
                 <div>
@@ -73,11 +104,41 @@ export default class FilterList extends React.Component {
                         <input id="see-all" value="see-all" type="radio" name="filter" onChange={this.onChange.bind(this, "seeAll")}/>
                  </label>
                 </div>
-                {this.state.selectedFilter === "availableNow" ? <section className="available-now-box"><h3>Available Now</h3></section> : null}
-                {this.state.selectedFilter === "rating"? <section className="rating-box"><h3>Rating</h3></section> : null}
-                {this.state.selectedFilter === "workingHours"? <section className="working-hours-box"><h3>Working Hours</h3></section> : null}
-                {this.state.selectedFilter === "favorites"? <section className="favorites-box"><h3>Favorites</h3></section> : null}
-                {this.state.selectedFilter === "gender"? <section className="gender-box"><h3>Gender</h3></section> : null}
+                {this.state.selectedFilter === "rating"? <section className="rating-box"><h3>Rating</h3><StarRatingComponent
+                    name="rate1"
+                    starCount={5}
+                    value={this.state.rating}
+                    onStarClick={this.onStarClick.bind(this)}
+                /></section> : null}
+                {this.state.selectedFilter === "workingHours"? <section className="working-hours-box"><h3>Working Hours</h3>
+                    <div>
+                        <label htmlFor="morning">Mornings
+                            <input id="morning" value="morning" type="radio" name="working-hours-radio" onChange={this.onHoursChange.bind(this, "mornings")}/>
+                        </label>
+                    </div>
+                    <div>
+                        <label htmlFor="evening">Evenings
+                            <input id="evening" value="evening" type="radio" name="working-hours-radio" onChange={this.onHoursChange.bind(this, "evenings")}/>
+                        </label>
+                    </div>
+                    <div>
+                        <label htmlFor="all-day">All day
+                            <input id="all-day" value="all-day" type="radio" name="working-hours-radio" onChange={this.onHoursChange.bind(this, "allDay")}/>
+                        </label>
+                    </div>
+                </section> : null}
+                {this.state.selectedFilter === "gender"? <section className="gender-box"><h3>Gender</h3>
+                    <div>
+                        <label htmlFor="male">Male
+                            <input id="male" value="male" type="radio" name="gender-radio" onChange={this.onGenderChange.bind(this, "male")}/>
+                        </label>
+                    </div>
+                    <div>
+                        <label htmlFor="female">Female
+                            <input id="female" value="female" type="radio" name="gender-radio" onChange={this.onGenderChange.bind(this, "female")}/>
+                        </label>
+                    </div>
+                </section> : null}
             </div>
         );
     }
