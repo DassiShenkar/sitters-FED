@@ -22,9 +22,12 @@
     "javascript"
   ],
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.10.2",
     "cloudinary": "^1.4.1",
     "express": "^4.13.4",
     "react": "^0.14.8",
+    "react-bootstrap-datetimepicker": "0.0.22",
+    "react-date-picker": "^5.3.23",
     "react-dom": "^0.14.8",
     "react-native-star-rating": "^1.0.6",
     "react-router": "^2.5.2",

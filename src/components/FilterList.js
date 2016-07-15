@@ -8,6 +8,7 @@ export default class FilterList extends React.Component {
         super();
         this.state = {
             selectedFilter: "availableNow",
+            subFilter: "",
             rating: 5,
             workingHours: "mornings",
             gender: "male",
@@ -69,9 +70,43 @@ export default class FilterList extends React.Component {
             dataType: 'json',
             type : 'post',
             contentType: 'application/json',
-            data: JSON.stringify({ 'email': 'parent1@gmail.com'}),
+            data: JSON.stringify({ 'email': localStorage.email}),
             success: function (data) {
                 this.setState({favoriteSitters: data});
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString()); //TODO: remove console.log
+            }.bind(this)
+        });
+    }
+
+    loadByWorkingHours(workingHours) {
+        $.ajax({
+            url: 'https://sitters-ws.herokuapp.com/getSittersByWorkingHours',
+            dataType: 'json',
+            type : 'post',
+            contentType: 'application/json',
+            data: JSON.stringify({ 'workingHours': workingHours}),
+            success: function (data) {
+                this.setState({sittersByHours: data});
+                console.log(data);
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString()); //TODO: remove console.log
+            }.bind(this)
+        });
+    }
+
+    loadSittersByGender(gender) {
+        $.ajax({
+            url: 'https://sitters-ws.herokuapp.com/getSitterByGender',
+            dataType: 'json',
+            type : 'post',
+            contentType: 'application/json',
+            data: JSON.stringify({ 'gender': gender}),
+            success: function (data) {
+                this.setState({sittersByGender: data});
+                console.log(data);
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString()); //TODO: remove console.log
@@ -88,72 +123,50 @@ export default class FilterList extends React.Component {
                 }
                 break;
             case "rating":
-                this.setState({selectedFilter: "rating"});
-                this.state.availableSitters = this.loadAvailableSittersFromServer();
+                this.setState({selectedFilter: "topSitters"});
+                this.loadTopSittersFromServer();
                 break;
             case "workingHours":
                 this.setState({selectedFilter: "workingHours"});
+                this.loadByWorkingHours("All day");
                 break;
             case "favorites":
                 this.setState({selectedFilter: "favorites"});
                 break;
             case "gender":
                 this.setState({selectedFilter: "gender"});
+                this.loadSittersByGender("male");
                 break;
             case "seeAll":
                 this.setState({selectedFilter: "seeAll"});
-                this.state.allSitters = this.loadAllSittersFromServer();
+                this.loadAllSittersFromServer();
                 break;
             case "mornings":
-                this.setState({selectedFilter: "mornings"});
+                this.setState({subFilter: "mornings"});
+                this.loadByWorkingHours("Mornings");
                 break;
             case "evenings":
-                this.setState({selectedFilter: "evenings"});
+                this.setState({subFilter: "evenings"});
+                this.loadByWorkingHours("Evenings");
                 break;
             case "allDay":
-                this.setState({selectedFilter: "allDay"});
+                this.setState({subFilter: "allDay"});
+                this.loadByWorkingHours("All day");
                 break;
             case "male":
-                this.setState({selectedFilter: "male"});
+                this.setState({subFilter: "male"});
+                this.loadSittersByGender("male");
                 break;
             case "female":
-                this.setState({selectedFilter: "female"});
+                this.setState({subFilter: "female"});
+                this.loadSittersByGender("female");
                 break;
         }
 
-    }
-
-    onHoursChange(timeOfDay) {
-        switch (timeOfDay) {
-            case "mornings":
-                this.setState({workingHours : "mornings"});
-                break;
-            case "evenings":
-                this.setState({workingHours : "evenings"});
-                break;
-            case "allDay":
-                this.setState({workingHours : "allDay"});
-                break;
-        }
-    }
-
-    onGenderChange(gender) {
-        switch (gender) {
-            case "male":
-                this.setState({gender : "male"});
-                break;
-            case "female":
-                this.setState({gender : "female"});
-                break;
-        }
     }
 
     onStarClick(name, value) {
         this.setState({rating: value});
-    }
-
-    onFilterChange() {
-        console.log("boom!");
     }
 
     render() {
@@ -161,16 +174,16 @@ export default class FilterList extends React.Component {
         if(this.state.availableSitters && this.state.selectedFilter === "availableNow") {
             available = <SitterList className="sitters-available-now" title="AVAILABLE NOW" sittersData={this.state.availableSitters}/>;
         }
-        if(this.state.topSitters && this.state.selectedFilter === "availableNow") {
+        if(this.state.topSitters && this.state.selectedFilter === "topSitters") {
             topRated = <SitterList className="sitters-top-rated" title="TOP RATED" sittersData={this.state.topSitters}/>;
         }
-        if(this.state.sittersByHours && this.state.selectedFilter === "availableNow") {
+        if(this.state.sittersByHours && this.state.selectedFilter === "workingHours") {
             workingHours = <SitterList className="sitters-working-hours" title="WORKING HOURS" sittersData={this.state.sittersByHours}/>;
         }
-        if(this.state.favoriteSitters && this.state.selectedFilter === "availableNow") {
+        if(this.state.favoriteSitters && this.state.selectedFilter === "favorites") {
             favorites = <SitterList className="sitters-favorites" title="MY FAVORITES" sittersData={this.state.favoriteSitters}/>;
         }
-        if(this.state.sittersByGender && this.state.selectedFilter === "availableNow") {
+        if(this.state.sittersByGender && (this.state.selectedFilter === "gender" || this.state.subFilter === "male" || this.state.subFilter === "female")) {
             gender = <SitterList className="sitters-gender" title="GENDER" sittersData={this.state.sittersByGender}/>;
         }
         if(this.state.allSitters && this.state.selectedFilter === "seeAll") {
@@ -209,13 +222,13 @@ export default class FilterList extends React.Component {
                         <input id="see-all" value="see-all" type="radio" name="filter" onChange={this.onChange.bind(this, "seeAll")}/>
                  </label>
                 </div>
-                {this.state.selectedFilter === "rating"? <section className="rating-box"><h3>Rating</h3><StarRatingComponent
+                {this.state.selectedFilter === "topSitters"? <section className="sub-filter"><h3>Rating</h3><StarRatingComponent
                     name="rate1"
                     starCount={5}
                     value={this.state.rating}
                     onStarClick={this.onStarClick.bind(this)}
                 /></section> : null}
-                {this.state.selectedFilter === "workingHours"? <section className="working-hours-box"><h3>Working Hours</h3>
+                {this.state.selectedFilter === "workingHours"? <section className="sub-filter"><h3>Working Hours</h3>
                     <div>
                         <label htmlFor="morning">Mornings
                             <input id="morning" value="morning" type="radio" name="working-hours-radio" onChange={this.onChange.bind(this, "mornings")}/>
@@ -232,7 +245,7 @@ export default class FilterList extends React.Component {
                         </label>
                     </div>
                 </section> : null}
-                {this.state.selectedFilter === "gender"? <section className="gender-box"><h3>Gender</h3>
+                {this.state.selectedFilter === "gender"? <section className="sub-filter"><h3>Gender</h3>
                     <div>
                         <label htmlFor="male">Male
                             <input id="male" value="male" type="radio" name="gender-radio" onChange={this.onChange.bind(this, "male")}/>
@@ -244,10 +257,10 @@ export default class FilterList extends React.Component {
                         </label>
                     </div>
                 </section> : null}
-                <div class="btn btn-primary" onClick={this.onFilterChange}>Save filters</div>
                 {available}
                 {favorites}
                 {topRated}
+                {workingHours}
                 {seeAll}
             </div>
         );
