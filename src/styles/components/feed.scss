@@ -1,9 +1,13 @@
+$baby-blue:  #7ad0f8;
+$light-green: #88d685;
+$pink: #f7a1a1;
+
 header {
   display: flex;
   flex-direction: row;
-  background: #7ad0f8;
+  background: $baby-blue;
   color: #fff;
-  padding: 96px 4.3% 0px 5.3%;
+  padding: 65px 4.3% 55px 5.3%;
 }
 
 section {
@@ -58,3 +62,23 @@ img.profile {
   height: 96px;
 }
 
+h2 {
+  font-size: 70px;
+}
+
+.sitters-available-now{
+  background-color: $baby-blue;
+}
+
+.sitters-favorites {
+  background-color: $light-green;
+}
+
+.sitters-top-rated {
+  background-color: $pink;
+}
+
+.filter {
+  background-color: #fff;
+  height: 100px;
+}

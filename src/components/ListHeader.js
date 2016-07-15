@@ -5,8 +5,9 @@ export default class Sitter extends React.Component {
         super();
     }
     render() {
+        const listClassName = "list-header " + this.props.className;
         return (
-            <section className="list-header">
+            <section className= {listClassName}>
                 <div className="icon star-container"></div>
                 <div className="category">
                     <h2>{this.props.title}</h2>

@@ -8,7 +8,9 @@ import '../styles/components/feed.scss';
 export default class Feed extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {parentData: {name: localStorage.name, email: localStorage.email, profilePictureURL: localStorage.profilePicture}, availableSitters: null, favoriteSitters: null, topSitters: null};
+        this.state = {parentData: {name: localStorage.name, email: localStorage.email,
+            profilePictureURL: localStorage.profilePicture}, availableSitters: null, favoriteSitters: null,
+            topSitters: null, showFilter: false};
     }
 
     componentDidMount() {
@@ -62,16 +64,21 @@ export default class Feed extends React.Component {
         });
     }
 
+    onFilterClick(e) {
+        e.preventDefault();
+        this.setState({showFilter : !this.state.showFilter});
+    }
+
     render() {
         let available, favorites, topRated;
         if(this.state.availableSitters) {
-            available = <SitterList id="sitters-available-now" title="Available Now" sittersData={this.state.availableSitters}/>;
+            available = <SitterList className="sitters-available-now" title="AVAILABLE NOW" sittersData={this.state.availableSitters}/>;
         }
         if(this.state.favoriteSitters) {
-            favorites = <SitterList id="sitters-favorites" title="My Favorites" sittersData={this.state.favoriteSitters}/>;
+            favorites = <SitterList className="sitters-favorites" title="MY FAVORITES" sittersData={this.state.favoriteSitters}/>;
         }
         if(this.state.topSitters) {
-            topRated = <SitterList id="sitters-top-rated" title="Top Rated" sittersData={this.state.topSitters}/>;
+            topRated = <SitterList className="sitters-top-rated" title="TOP RATED" sittersData={this.state.topSitters}/>;
         }
         return (
             <div id="feed">
@@ -83,9 +90,12 @@ export default class Feed extends React.Component {
                     </section>
                     <section>
                         <Calendar/>
-                        <Filter/>
+                        <div className="filter-btn" onClick={this.onFilterClick.bind(this)}>
+                            <Filter/>
+                        </div>
                     </section>
                 </header>
+                {this.state.showFilter ? <section className="filter">hhh</section> : null}
                 {available}
                 {favorites}
                 {topRated}
