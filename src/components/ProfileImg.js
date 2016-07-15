@@ -7,7 +7,7 @@ export default class ProfileImg extends React.Component {
 
     render() {
         return (
-            <img className="profile small-profile" src={this.props.profilePicture} alt={this.props.name} title={this.props.name}/>
+            <img className="profile" src={this.props.profilePicture} alt={this.props.name} title={this.props.name}/>
         );
     }
 }

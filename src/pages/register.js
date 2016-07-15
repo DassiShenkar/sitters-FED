@@ -47,7 +47,7 @@ export default class Login extends React.Component {
             }),
             success: function (data) {
                 this.setState({data: data});
-                console.log(data);
+                location.replace("feed");
             }.bind(this),
             error: function(xhr, status, err) {
                 //TODO: in error

@@ -26,7 +26,8 @@
     "express": "^4.13.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
-    "react-router": "^2.5.2"
+    "react-router": "^2.5.2",
+    "react-svg-loader": "^1.0.1"
   },
   "devDependencies": {
     "babel": "^6.5.2",
