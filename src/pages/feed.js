@@ -16,8 +16,7 @@ export default class Feed extends React.Component {
             mode: "dateTime"};
     }
 
-    onFilterClick(e) {
-        e.preventDefault();
+    onFilterClick() {
         this.setState({showFilter : !this.state.showFilter});
     }
 
@@ -38,8 +37,8 @@ export default class Feed extends React.Component {
                     <section>
                         <div className="filter-btn" onClick={this.onFilterClick.bind(this)}>
                             <Filter/>
-                            <Calendar/>
                         </div>
+                        <Calendar/>
                     </section>
                     <DateTimeField dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleChange.bind(this)} viewMode={mode}/>
                 </header>

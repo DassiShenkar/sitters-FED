@@ -20,11 +20,7 @@ export default class FilterList extends React.Component {
             allSitters: null
         }
     }
-
-    componentDidMount() {
-        this.loadAvailableSittersFromServer();
-    }
-
+    
     loadAllSittersFromServer() {
         $.ajax({
             url: 'https://sitters-ws.herokuapp.com/getAllSitters',
