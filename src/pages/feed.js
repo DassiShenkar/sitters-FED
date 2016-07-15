@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileImg from '../components/ProfileImg';
 import SitterList from '../components/SitterList';
+import FilterList from '../components/FilterList';
 import Filter from '../styles/icons/Filter';
 import Calendar from '../styles/icons/Calendar';
 import '../styles/components/feed.scss';
@@ -95,7 +96,7 @@ export default class Feed extends React.Component {
                         </div>
                     </section>
                 </header>
-                {this.state.showFilter ? <section className="filter">hhh</section> : null}
+                {this.state.showFilter ? <FilterList className="filter"/> : null}
                 {available}
                 {favorites}
                 {topRated}
