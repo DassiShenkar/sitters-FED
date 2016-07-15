@@ -6,6 +6,7 @@ export default class SitterProfile extends React.Component {
     }
 
     render() {
+        console.log(this.props.params.sitter);
         return (
             <div>sitterProfile</div>
         );

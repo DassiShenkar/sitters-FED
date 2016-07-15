@@ -35,9 +35,9 @@ export default class Feed extends React.Component {
                         <h3 className="name">{this.state.parentData.name}</h3>
                     </section>
                     <section>
-                        <div className="filter-btn" onClick={this.onFilterClick.bind(this)}>
+                        <a className="filter-btn" onClick={this.onFilterClick.bind(this)}>
                             <Filter/>
-                        </div>
+                        </a>
                         <Calendar/>
                     </section>
                     <DateTimeField dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleChange.bind(this)} viewMode={mode}/>
