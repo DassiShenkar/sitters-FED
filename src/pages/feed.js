@@ -10,7 +10,7 @@ export default class Feed extends React.Component {
     constructor(props) {
         super(props);
         this.state = {parentData: {name: localStorage.name, email: localStorage.email,
-            profilePictureURL: localStorage.profilePicture}, showFilter: false, date: "2016-07-17-16-50",
+            profilePictureURL: localStorage.profilePicture}, showFilter: false, startDate: "", endDate: "", date: "2016-07-17-16-50",
             format: "YYYY-MM-DD-HH-mm",
             inputFormat: "DD/MM/YYYY HH:mm",
             mode: "dateTime"};
@@ -20,8 +20,14 @@ export default class Feed extends React.Component {
         this.setState({showFilter : !this.state.showFilter});
     }
 
-    handleChange(newDate) {
-        return this.setState({date: newDate});
+    handleStartTimeChange(newStartDate) {
+        localStorage.startDate = newStartDate;
+        return this.setState({startDate: newStartDate});
+    }
+
+    handleEndTimeChange(newEndDate) {
+        localStorage.endDate = newEndDate;
+        return this.setState({endDate: newEndDate});
     }
 
     render() {
@@ -40,7 +46,8 @@ export default class Feed extends React.Component {
                         </a>
                         <Calendar/>
                     </section>
-                    <DateTimeField dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleChange.bind(this)} viewMode={mode}/>
+                    <DateTimeField dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleStartTimeChange.bind(this)} viewMode={mode}/>
+                    <DateTimeField dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleEndTimeChange.bind(this)} viewMode={mode}/>
                 </header>
                 {this.state.showFilter ? <FilterList onFilterChange={this.onFilterChange} className="filter"/> : null}
             </div>

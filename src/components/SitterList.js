@@ -14,7 +14,7 @@ export default class SittersList extends React.Component {
         return (
             <div>
                 <ListHeader title={listTitle} className={listClass}/>
-                <div class="sitter-list">{sitterNodes}</div>
+                <div className="sitter-list">{sitterNodes}</div>
             </div>
         );
     }
