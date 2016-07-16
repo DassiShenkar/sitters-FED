@@ -21,6 +21,7 @@ export default class Login extends React.Component {
             childPicture: "someurl.com",
             childAllergies: this.refs.childAllergies
         };
+        localStorage.address = parentInput.street.value + " " + parentInput.houseNumber.value + " " +parentInput.city.value; 
         $.ajax({
             url: 'https://sitters-ws.herokuapp.com/insertParent',
             dataType: 'json',

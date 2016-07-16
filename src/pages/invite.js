@@ -13,16 +13,10 @@ export default class Invite extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // let parentInput = {
-        //     partner: this.refs.partner,
-        //     city: this.refs.city,
-        //     street: this.refs.street,
-        //     houseNumber: this.refs.houseNumber,
-        //     childName: this.refs.childName,
-        //     childAge: this.refs.childAge,
-        //     childPicture: "someurl.com",
-        //     childAllergies: this.refs.childAllergies
-        // };
+        let inviteInfo = {
+            allergies: this.refs.allergies,
+            personalMsg: this.refs.msg
+        };
         $.ajax({
             url: 'https://sitters-ws.herokuapp.com/insertInvite',
             dataType: 'json',
@@ -31,13 +25,13 @@ export default class Invite extends React.Component {
             data: JSON.stringify({
                 sitterEmail: "sitter1@gmail.com",
                 parentEmail: localStorage.email,
-                street: "street",
-                date: "date",
-                startTime: "startTime",
-                endTime: "endTime",
-                "allergies": [
-                    "yoel", "yoel1"
-                ]
+                street: localStorage.address,
+                date: localStorage.startDate.split(" ")[0],
+                startTime: localStorage.startDate.split(" ")[1],
+                endTime: localStorage.endDate.split(" ")[1],
+                // personalMsg: inviteInfo.personalMsg,
+                recurring: this.state.reoccurring,
+                allergies: ["jczxcj", "jcjzskjck"]
 
             }),
             success: function (data) {
@@ -86,8 +80,8 @@ export default class Invite extends React.Component {
                 </label>
             </div>
 
-            <textarea name="allergies" placeholder="enter allergy details" id="aller" cols="1" rows="1"/>
-            <textarea name="message" placeholder="write a personal message" id="msg" cols="1" rows="1"/>
+            <textarea ref="allergies" name="allergies" placeholder="enter allergy details" id="aller" cols="1" rows="1"/>
+            <textarea ref="msg" name="msg" placeholder="write a personal message" id="msg" cols="1" rows="1"/>
             <button className="btn btn-primary">Send Invitation</button>
         </form>
         );
