@@ -6,16 +6,16 @@ export default class Sitter extends React.Component {
         super();
     }
     render() {
-        const listClassName = "list-header " + this.props.className;
+        const listClassName = "list-header-" + this.props.className;
         const firstTitle = this.props.title.split(" ")[0];
         const secondTitle = this.props.title.split(" ")[1];
         return (
             <section className= {listClassName}>
                 <div className="icon star-container"></div>
-                <div className="category">
+                <section className="category">
                     <h2 className="list-title">{firstTitle}</h2>
                     <h2 className="list-title">{secondTitle}</h2>
-                </div>
+                </section>
             </section>
         );
     }
