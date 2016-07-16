@@ -7,7 +7,7 @@ export default class Sitter extends React.Component {
     }
 
     render() {
-        const css = {background: 'url('+this.props.fullPictureURL+') no-repeat center center'};
+        const css = {background: 'url('+this.props.fullPictureURL+') no-repeat center center ' + '/cover'};
         const siiterLink = '/sitters/' + this.props.email;
         return (
             <a className="sitter-item" href={siiterLink}>

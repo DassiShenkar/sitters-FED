@@ -47,7 +47,7 @@ export default class SitterProfile extends React.Component {
                         </section>
                         <section className="knowMore">
                             <p >GET TO KNOW {firstName}</p>
-                            <a href="#">See more</a>
+                            <a href="#"><i>See more</i></a>
                         </section>
                     </section>
                 </header>
