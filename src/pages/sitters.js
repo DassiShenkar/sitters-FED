@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewList from "../components/ReviewList";
+import '../styles/components/sitterProfile.scss';
 
 export default class SitterProfile extends React.Component {
 
@@ -31,56 +32,53 @@ export default class SitterProfile extends React.Component {
     }
 
     render() {
-        const css = {background: 'url('+this.state.sitterPicture+') no-repeat center center', backgroundSize: 'cover'};
+        const css = {background: 'url('+this.state.sitterPicture+') no-repeat center center ' + '/cover'};
         const mailto = "mailto:" + this.state.email;
+        const firstNameLower = this.state.name.split(' ')[0];
+        const firstName = firstNameLower.toUpperCase();
         const inviteLink = '/sendInvite';
         return (
-            <div>
+            <div className="sitter-wrapper">
                 <header style={css}>
-                    <section id="profilePicture">
-                        <section class="profilePicture">
-                            <p class="greeting">Say Hello to</p>
-                            <h3 class="name">{this.state.name}</h3>
+                    <section className="profilePicture">
+                        <section className="hello">
+                            <p >Say Hello to</p>
+                            <h3 className="sitter-name">{this.state.name}</h3>
                         </section>
-                        <section class="knowMore">
-                            <p class="greeting">GET TO KNOW {this.state.name}</p>
+                        <section className="knowMore">
+                            <p >GET TO KNOW {firstName}</p>
                             <a href="#">See more</a>
                         </section>
                     </section>
                 </header>
-                <table class="tableInfo">
+                <table className="tableInfo">
                     <thead>
-                        <th class="icon">
+                        <th className="icon">
                         </th>
-                        <th class="icon">
+                        <th className="icon">
                         </th>
-                        <th class="icon">
+                        <th className="icon">
                         </th>
                     </thead>
                     <tbody>
-                    <tr class="middleRow">
+                    <tr className="middleRow">
                         <td>{this.state.hourFee}$</td>
                         <td>{this.state.rating}</td>
                         <td>{this.state.minAge}-{this.state.maxAge}</td>
                     </tr>
-                    <tr class="lastRow">
+                    <tr className="lastRow">
                         <td>Hour fee</td>
                         <td>Rating</td>
                         <td>Years</td>
                     </tr>
                     </tbody>
-            </table>
-                <ReviewList allReviews={this.state.reviews}/>
-            <section class="contact-sitter">
-            <p>Have a question? <span><a href={mailto}>Contact {this.state.name}</a></span></p>
-            </section>
-            <a class="submit-invite" href={inviteLink}>
-            <div class="book-now">
-            <img src="static/images/book.png"/>
-            <p>Book now</p>
-        </div>
-        </a>
-    </div>
+                 </table>
+                 <ReviewList allReviews={this.state.reviews}/>
+                 <section className="contact-sitter">
+                    <p>Have a question?<a href={mailto}>Contact {firstNameLower}</a></p>
+                </section>
+                <a className="submit-invite" href={inviteLink}>Book now</a>
+            </div>
         );
     }
 }

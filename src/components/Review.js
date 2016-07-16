@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/components/review.scss'
 
 export default class Review extends React.Component {
     constructor() {
