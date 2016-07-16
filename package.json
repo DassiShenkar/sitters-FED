@@ -7,7 +7,7 @@
   "author": "Dassi Rosen, Arel Gindos",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors --inline --hot",
+    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
     "start": "node ./app.js"
   },
   "repository": {
@@ -25,6 +25,8 @@
     "babel-plugin-transform-class-properties": "^6.10.2",
     "cloudinary": "^1.4.1",
     "express": "^4.13.4",
+    "input-moment": "^0.2.0",
+    "moment": "^2.14.1",
     "react": "^0.14.8",
     "react-bootstrap-datetimepicker": "0.0.22",
     "react-date-picker": "^5.3.23",

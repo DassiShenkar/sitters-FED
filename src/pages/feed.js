@@ -1,55 +1,69 @@
 import React from 'react';
 import ProfileImg from '../components/ProfileImg';
 import FilterList from '../components/FilterList';
+import SitterList from '../components/SitterList';
 import Filter from '../styles/icons/Filter';
-import Calendar from '../styles/icons/Calendar';
 import '../styles/components/feed.scss';
-import DateTimeField from 'react-bootstrap-datetimepicker';
 
 export default class Feed extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {parentData: {name: localStorage.name, email: localStorage.email,
-            profilePictureURL: localStorage.profilePicture}, showFilter: false, startDate: "", endDate: "", date: "2016-07-17-16-50",
-            format: "YYYY-MM-DD-HH-mm",
-            inputFormat: "DD/MM/YYYY HH:mm",
-            mode: "dateTime"};
+        this.state = {
+            parentData: {
+                name: localStorage.name, email: localStorage.email,
+                profilePictureURL: localStorage.profilePicture
+            },
+            showFilter: false,
+            availableSitters: null
+        };
+    }
+
+    componentDidMount() {
+        this.loadAvailableSittersFromServer();
+    }
+
+    loadAvailableSittersFromServer() {
+        $.ajax({
+            url: 'https://sitters-ws.herokuapp.com/getAvailableNowSitters',
+            dataType: 'json',
+            success: function (data) {
+                this.setState({availableSitters: data});
+            }.bind(this),
+            error: function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
     }
 
     onFilterClick() {
-        this.setState({showFilter : !this.state.showFilter});
-    }
-
-    handleStartTimeChange(newStartDate) {
-        localStorage.startDate = newStartDate;
-        return this.setState({startDate: newStartDate});
-    }
-
-    handleEndTimeChange(newEndDate) {
-        localStorage.endDate = newEndDate;
-        return this.setState({endDate: newEndDate});
+        this.setState({showFilter: !this.state.showFilter});
     }
 
     render() {
-        const {date, format, mode, inputFormat} = this.state;
+        let available;
+        if (!this.state.showFilter && this.state.availableSitters) {
+            available = <SitterList className="sitters-available-now" title="AVAILABLE NOW"
+                                    sittersData={this.state.availableSitters}/>;
+        }
         return (
             <div id="feed">
                 <header>
-                    <ProfileImg profilePicture={this.state.parentData.profilePictureURL} username={this.state.parentData.name}/>
-                    <section className="greeting">
-                        <p>Hello</p>
-                        <h3 className="name">{this.state.parentData.name}</h3>
+                    <section className="no-date">
+                        <ProfileImg profilePicture={this.state.parentData.profilePictureURL}
+                                    username={this.state.parentData.name}/>
+                        <section className="greeting">
+                            <p>Hello</p>
+                            <h3 className="name">{this.state.parentData.name}</h3>
+                        </section>
+                        <section>
+                            <a className="filter-btn" onClick={this.onFilterClick.bind(this)}>
+                                <Filter/>
+                            </a>
+                        </section>
                     </section>
-                    <section>
-                        <a className="filter-btn" onClick={this.onFilterClick.bind(this)}>
-                            <Filter/>
-                        </a>
-                        <Calendar/>
-                    </section>
-                    <DateTimeField dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleStartTimeChange.bind(this)} viewMode={mode}/>
-                    <DateTimeField dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleEndTimeChange.bind(this)} viewMode={mode}/>
                 </header>
                 {this.state.showFilter ? <FilterList onFilterChange={this.onFilterChange} className="filter"/> : null}
+                {available}
             </div>
         );
     }

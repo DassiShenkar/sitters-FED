@@ -3,8 +3,6 @@ $light-green: #88d685;
 $pink: #f7a1a1;
 
 header {
-  display: flex;
-  flex-direction: row;
   background: $baby-blue;
   color: #fff;
   padding: 65px 4.3% 55px 5.3%;
@@ -29,6 +27,14 @@ svg {
 
 svg path {
   fill: #fff;
+}
+
+.no-date {
+  display: flex;
+}
+
+.input-group {
+  width: 30%;
 }
 
 .greeting {

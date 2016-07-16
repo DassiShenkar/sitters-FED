@@ -1,9 +1,13 @@
 import React from 'react';
+import DateTimeField from 'react-bootstrap-datetimepicker';
 
 export default class Invite extends React.Component {
     constructor() {
         super();
-        this.state = {reoccurring: "none"};
+        this.state = {reoccurring: "none", startDate: "", endDate: "", date: "2016-07-17-16-50",
+            format: "YYYY-MM-DD-HH-mm",
+            inputFormat: "DD/MM/YYYY HH:mm",
+            mode: "dateTime"};
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -45,7 +49,18 @@ export default class Invite extends React.Component {
         });
     }
 
+    handleStartTimeChange(newStartDate) {
+        localStorage.startDate = newStartDate;
+        return this.setState({startDate: newStartDate});
+    }
+
+    handleEndTimeChange(newEndDate) {
+        localStorage.endDate = newEndDate;
+        return this.setState({endDate: newEndDate});
+    }
+
     render() {
+        const {date, format, mode, inputFormat} = this.state;
         return (
         <form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
             <table class="tableInfo">
@@ -79,6 +94,10 @@ export default class Invite extends React.Component {
                     <input id="monthly" className="radio-inline" value="monthly" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "monthly")}/>
                 </label>
             </div>
+            <section className="date-selected">
+                <DateTimeField className="date-picker" dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleStartTimeChange.bind(this)} viewMode={mode}/>
+                <DateTimeField className="date-picker" dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleEndTimeChange.bind(this)} viewMode={mode}/>
+            </section>
 
             <textarea ref="allergies" name="allergies" placeholder="enter allergy details" id="aller" cols="1" rows="1"/>
             <textarea ref="msg" name="msg" placeholder="write a personal message" id="msg" cols="1" rows="1"/>
