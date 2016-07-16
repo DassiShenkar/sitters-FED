@@ -13,38 +13,31 @@ export default class Invite extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        let parentInput = {
-            partner: this.refs.partner,
-            city: this.refs.city,
-            street: this.refs.street,
-            houseNumber: this.refs.houseNumber,
-            childName: this.refs.childName,
-            childAge: this.refs.childAge,
-            childPicture: "someurl.com",
-            childAllergies: this.refs.childAllergies
-        };
+        // let parentInput = {
+        //     partner: this.refs.partner,
+        //     city: this.refs.city,
+        //     street: this.refs.street,
+        //     houseNumber: this.refs.houseNumber,
+        //     childName: this.refs.childName,
+        //     childAge: this.refs.childAge,
+        //     childPicture: "someurl.com",
+        //     childAllergies: this.refs.childAllergies
+        // };
         $.ajax({
-            url: 'https://sitters-ws.herokuapp.com/insertParent',
+            url: 'https://sitters-ws.herokuapp.com/insertInvite',
             dataType: 'json',
             type : 'post',
             contentType: 'application/json',
             data: JSON.stringify({
-                name: localStorage.name,
-                password: localStorage.token,
-                email: localStorage.email,
-                profilePictureURL: localStorage.profilePicture,
-                partner: parentInput.partner.value,
-                address: {
-                    city: parentInput.city.value,
-                    street: parentInput.street.value,
-                    houseNumber: parentInput.houseNumber.value
-                },
-                childes: [{
-                    name: parentInput.childName.value,
-                    age: parentInput.childAge.value,
-                    profilePictureURL: parentInput.childPicture.value,
-                    allergies: parentInput.childAllergies.value
-                }]
+                sitterEmail: "sitter1@gmail.com",
+                parentEmail: localStorage.email,
+                street: "street",
+                date: "date",
+                startTime: "startTime",
+                endTime: "endTime",
+                "allergies": [
+                    "yoel", "yoel1"
+                ]
 
             }),
             success: function (data) {
@@ -60,7 +53,7 @@ export default class Invite extends React.Component {
 
     render() {
         return (
-        <form className="commentForm" onSubmit={this.handleSubmit}>
+        <form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
             <table class="tableInfo">
                 <thead>
                 <th class="icon">
@@ -72,7 +65,6 @@ export default class Invite extends React.Component {
                 </thead>
                 <tbody>
                 <tr class="middleRow">
-
                     <td><p>Arlozorov 52 Tel Aviv</p></td>
                 </tr>
                 </tbody>
