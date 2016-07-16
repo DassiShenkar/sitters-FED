@@ -195,37 +195,33 @@ export default class FilterList extends React.Component {
         }
         return (
             <div className="filter-list" onChange={this.onChange.bind(this)}>
-                <h1>Sort by</h1>
-                <div>
-                    <label htmlFor="available-now">Available Now
+                <h1 className="filter-list-title">Sort by</h1>
+                <ul className="main-filter">
+                    <li>
+                        <label htmlFor="available-now">Available Now</label>
                         <input id="available-now" value="available-now" type="radio" checked={this.state.selectedFilter === "availableNow"} name="filter" onChange={this.onChange.bind(this, "availableNow")}/>
-                    </label>
-                </div>
-                <div>
-                    <label htmlFor="rating">Rating
+                    </li>
+                    <li>
+                        <label htmlFor="rating">Rating</label>
                         <input id="rating" value="rating" type="radio" checked={this.state.selectedFilter === "topSitters"} name="filter" onChange={this.onChange.bind(this, "rating")}/>
-                    </label>
-                </div>
-                <div>
-                    <label htmlFor="working-hours">Working Hours
+                    </li>
+                    <li>
+                        <label htmlFor="working-hours">Working Hours</label>
                         <input id="working-hours" value="working-hours" checked={this.state.selectedFilter === "workingHours"} type="radio" name="filter" onChange={this.onChange.bind(this, "workingHours")}/>
-                    </label>
-                </div>
-                <div>
-                    <label htmlFor="favorites">Favorites
+                    </li>
+                    <li>
+                        <label htmlFor="favorites">Favorites</label>
                         <input id="favorites" value="favorites" type="radio" checked={this.state.selectedFilter === "favorites"} name="filter" onChange={this.onChange.bind(this, "favorites")}/>
-                    </label>
-                </div>
-                <div>
-                    <label htmlFor="gender">Gender
+                    </li>
+                    <li>
+                        <label htmlFor="gender">Gender</label>
                         <input id="gender" value="gender" type="radio" checked={this.state.selectedFilter === "gender"} name="filter" onChange={this.onChange.bind(this, "gender")}/>
-                    </label>
-                </div>
-                <div>
-                    <label htmlFor="see-all">See All
+                    </li>
+                    <li>
+                        <label htmlFor="see-all">See All</label>
                         <input id="see-all" value="see-all" type="radio" checked={this.state.selectedFilter === "seeAll"} name="filter" onChange={this.onChange.bind(this, "seeAll")}/>
-                 </label>
-                </div>
+                    </li>
+                </ul>
                 {this.state.selectedFilter === "topSitters"? <section className="sub-filter"><h3>Rating</h3><StarRatingComponent
                     name="rate1"
                     starCount={5}

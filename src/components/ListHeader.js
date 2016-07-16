@@ -13,8 +13,8 @@ export default class Sitter extends React.Component {
             <section className= {listClassName}>
                 <div className="icon star-container"></div>
                 <div className="category">
-                    <h2>{firstTitle}</h2>
-                    <h2>{secondTitle}</h2>
+                    <h2 className="list-title">{firstTitle}</h2>
+                    <h2 className="list-title">{secondTitle}</h2>
                 </div>
             </section>
         );

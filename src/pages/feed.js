@@ -53,7 +53,7 @@ export default class Feed extends React.Component {
                                     username={this.state.parentData.name}/>
                         <section className="greeting">
                             <p>Hello</p>
-                            <h3 className="name">{this.state.parentData.name}</h3>
+                            <h3 className="parent-name">{this.state.parentData.name}</h3>
                         </section>
                         <section className="filter-btn">
                             <a onClick={this.onFilterClick.bind(this)}>
