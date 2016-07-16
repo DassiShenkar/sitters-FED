@@ -7,7 +7,7 @@ export default class ReviewList extends React.Component {
     }
 
     render() {
-        const reviewNodes = this.props.allReviews.map((review, index) => <Review key={index} reviewData={review}/>);
+        const reviewNodes = this.props.allReviews.map((review, index) => <Review key={index} reviewData={review} />);
         return (
                 <div className="review-list">{reviewNodes}</div>
         );
