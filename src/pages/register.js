@@ -18,10 +18,13 @@ export default class Login extends React.Component {
             houseNumber: this.refs.houseNumber,
             childName: this.refs.childName,
             childAge: this.refs.childAge,
-            childPicture: "someurl.com",
+            childPicture: 'http://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png',
             childAllergies: this.refs.childAllergies
         };
-        localStorage.address = parentInput.street.value + " " + parentInput.houseNumber.value + " " +parentInput.city.value; 
+        console.log(this.refs.childName.value);
+        localStorage.address = parentInput.street.value + " " + parentInput.houseNumber.value + " " +parentInput.city.value;
+        localStorage.childName = parentInput.childName.value;
+        localStorage.childPicture = parentInput.childPicture;
         $.ajax({
             url: 'https://sitters-ws.herokuapp.com/insertParent',
             dataType: 'json',

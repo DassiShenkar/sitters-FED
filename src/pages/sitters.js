@@ -24,6 +24,8 @@ export default class SitterProfile extends React.Component {
             success: function (data) {
                 this.setState({reviews: data.reviews, name: data.name, minAge: data.minAge, hourFee: data.hourFee,
                     maxAge: data.maxAge, rating: data.rating, siiterEmail: data.email, sitterPicture: data.fullPictureURL});
+                localStorage.sitterEmail = data.email;
+                localStorage.sitterName = data.name;
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
