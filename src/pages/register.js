@@ -62,66 +62,66 @@ export default class Login extends React.Component {
                 <Logo/>
                 <h1>Sign In</h1>
                 <form>
-                    <div class="form-group row">
-                        <label for="partner" class="col-sm-2 form-control-label">Partner Name</label>
-                        <div class="col-sm-10">
+                    <div className="form-group row">
+                        <label for="partner" className="col-sm-2 form-control-label">Partner Name</label>
+                        <div className="col-sm-10">
                             <input type="text" name="partner-name" id="partner" ref="partner"/>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2">Address</label>
-                        <div class="col-sm-10">
-                            <div class="address">
+                    <div className="form-group row">
+                        <label className="col-sm-2">Address</label>
+                        <div className="col-sm-10">
+                            <div className="address">
                                 <label for="city">City</label>
                                 <input type="text" id="city" ref="city"/>
                             </div>
-                            <div class="address">
+                            <div className="address">
                                 <label for="street">Street</label>
                                 <input type="text" id="street" ref="street"/>
                             </div>
-                            <div class="address">
+                            <div className="address">
                                 <label for="houseNumber">House Number</label>
                                 <input type="number" id="houseNumber" ref="houseNumber"/>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2">Childes</label>
-                        <div class="multi-field-wrapper col-sm-10">
-                            <div class="multi-fields">
-                                <div class="multi-field">
+                    <div className="form-group row">
+                        <label className="col-sm-2">Childes</label>
+                        <div className="multi-field-wrapper col-sm-10">
+                            <div className="multi-fields">
+                                <div className="multi-field">
                                     <label for="name">Child Name:</label>
-                                    <input class="input name" id="name" name="prof1" type="text" placeholder="Moshe levi"
+                                    <input className="input name" id="name" name="prof1" type="text" placeholder="Moshe levi"
                                                              data-items="8" ref="childName"/>
                                     <label for="age">Age</label>
-                                    <input class="input age" id="age" name="prof1" type="number" placeholder="3" data-items="8" ref="childAge"/>
+                                    <input className="input age" id="age" name="prof1" type="number" placeholder="3" data-items="8" ref="childAge"/>
                                     <label for="picture-child">Upload child picture</label>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2">Upload Full Picture</label>
-                                        <div class="col-sm-10">
-                                            <div class="picture">
-                                                <input type="file" name="pic" class="upload_field" id="picture-child" accept="images/*" ref="childImgURL"/>
-                                                    <div class="progress_wrapper">
-                                                        <div class="progress_bar">
-                                                            <div class="text"></div>
+                                    <div className="form-group row">
+                                        <label className="col-sm-2">Upload Full Picture</label>
+                                        <div className="col-sm-10">
+                                            <div className="picture">
+                                                <input type="file" name="pic" className="upload_field" id="picture-child" accept="images/*" ref="childImgURL"/>
+                                                    <div className="progress_wrapper">
+                                                        <div className="progress_bar">
+                                                            <div className="text"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="thumbnails" id="childFullPicture">
+                                                    <div className="thumbnails" id="childFullPicture">
                                                         <input type="hidden" id="pictureURL"/>
                                                     </div>
                                             </div>
                                         </div>
                                     </div>
                                     <label for="allergies">Allergies</label>
-                                    <input class="input allergies" id="allergies" name="prof1" type="text"
+                                    <input className="input allergies" id="allergies" name="prof1" type="text"
                                                             placeholder="avocado,bamba" ref="childAllergies"/>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button class="btn btn-primary">Sign In</button>
+                    <div className="form-group row">
+                        <div className="col-sm-offset-2 col-sm-10">
+                            <button className="btn btn-primary">Sign In</button>
                         </div>
                     </div>
                 </form>

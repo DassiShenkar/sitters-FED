@@ -6,7 +6,7 @@ export default class SitterProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {reviews: [], email: this.props.params.sitter, name: "", minAge: 0, hourFee: "",
-            maxAge: 5, rating: "", sitterEmail: ""};
+            maxAge: 5, rating: "", sitterEmail: "", sitterPicture: ""};
     }
 
     componentDidMount() {
@@ -22,7 +22,7 @@ export default class SitterProfile extends React.Component {
             data: JSON.stringify({email : this.state.email}),
             success: function (data) {
                 this.setState({reviews: data.reviews, name: data.name, minAge: data.minAge, hourFee: data.hourFee,
-                    maxAge: data.maxAge, rating: data.rating, siiterEmail: data.email});
+                    maxAge: data.maxAge, rating: data.rating, siiterEmail: data.email, sitterPicture: data.fullPictureURL});
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
@@ -31,10 +31,12 @@ export default class SitterProfile extends React.Component {
     }
 
     render() {
+        const css = {background: 'url('+this.state.sitterPicture+') no-repeat center center', backgroundSize: 'cover'};
         const mailto = "mailto:" + this.state.email;
+        const inviteLink = '/sendInvite';
         return (
             <div>
-                <header>
+                <header style={css}>
                     <section id="profilePicture">
                         <section class="profilePicture">
                             <p class="greeting">Say Hello to</p>
@@ -72,7 +74,7 @@ export default class SitterProfile extends React.Component {
             <section class="contact-sitter">
             <p>Have a question? <span><a href={mailto}>Contact {this.state.name}</a></span></p>
             </section>
-            <a class="submit-invite" href="invite.html">
+            <a class="submit-invite" href={inviteLink}>
             <div class="book-now">
             <img src="static/images/book.png"/>
             <p>Book now</p>
