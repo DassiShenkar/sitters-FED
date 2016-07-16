@@ -1,0 +1,30 @@
+.sitter {
+  height: 545px;
+}
+
+img.sitter-profile {
+  width: 146px;
+  height: 146px;
+  display: block;
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 50px;
+  text-align: center;
+  margin: 22px 0 0 0;
+}
+
+a.sitter-item {
+  text-decoration: none;
+}
+
+.sitter-score {
+  display: block;
+  height: 171px;
+  text-align: right;
+  list-style-type: none;
+  padding: 40px 5.2%;
+  font-size: 40px;
+  font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

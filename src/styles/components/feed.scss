@@ -1,15 +1,31 @@
+@import "filters";
+@import "listHeader";
+@import "sitter";
+
 $baby-blue:  #7ad0f8;
 $light-green: #88d685;
 $pink: #f7a1a1;
 
+h2 {
+  margin: 0;
+}
+
 header {
   background: $baby-blue;
   color: #fff;
-  padding: 65px 4.3% 55px 5.3%;
+}
+
+.parent-profile {
+  display: flex;
+  padding: 65px 5.3%;
+}
+
+.parent-img {
+  width: 110px;
+  height: 110px;
 }
 
 section {
-  padding: 19px 1.5%;
   color: #fff;
 }
 
@@ -39,6 +55,7 @@ svg path {
 
 .greeting {
   flex: 1;
+  padding: 0 1.5%;
 }
 
 .greeting p {
@@ -52,20 +69,9 @@ svg path {
   font-size: 40px;
 }
 
-h3.name {
-  margin: 0;
-}
-
-img.profile {
+.profile {
   border-radius: 50%;
   border: 6px solid #fff;
-  width: 110px;
-  height: 110px;
-}
-
-.small-profile {
-  width: 96px;
-  height: 96px;
 }
 
 h2 {

@@ -48,15 +48,15 @@ export default class Feed extends React.Component {
         return (
             <div id="feed">
                 <header>
-                    <section className="no-date">
+                    <section className="parent-profile">
                         <ProfileImg profilePicture={this.state.parentData.profilePictureURL}
                                     username={this.state.parentData.name}/>
                         <section className="greeting">
                             <p>Hello</p>
                             <h3 className="name">{this.state.parentData.name}</h3>
                         </section>
-                        <section>
-                            <a className="filter-btn" onClick={this.onFilterClick.bind(this)}>
+                        <section className="filter-btn">
+                            <a onClick={this.onFilterClick.bind(this)}>
                                 <Filter/>
                             </a>
                         </section>
