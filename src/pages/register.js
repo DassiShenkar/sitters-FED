@@ -62,7 +62,7 @@ export default class Login extends React.Component {
 
     render() {
         return (
-            <form id="login-form">
+            <form id="register-form">
                 <section className="invite-info">
                     <Logo/>
                     <h1 className="login-title">Sign In</h1>

@@ -1,6 +1,9 @@
 import React from 'react';
 import ReviewList from "../components/ReviewList";
 import '../styles/components/sitterProfile.scss';
+import Dollar from '../styles/icons/Dollar';
+import Star from '../styles/icons/Star';
+import Family from '../styles/icons/Family';
 
 export default class SitterProfile extends React.Component {
 
@@ -53,28 +56,23 @@ export default class SitterProfile extends React.Component {
                         </section>
                     </section>
                 </header>
-                <table className="tableInfo">
-                    <thead>
-                        <th className="icon">
-                        </th>
-                        <th className="icon">
-                        </th>
-                        <th className="icon">
-                        </th>
-                    </thead>
-                    <tbody>
-                    <tr className="middleRow">
-                        <td>{this.state.hourFee}$</td>
-                        <td>{this.state.rating}</td>
-                        <td>{this.state.minAge}-{this.state.maxAge}</td>
-                    </tr>
-                    <tr className="lastRow">
-                        <td>Hour fee</td>
-                        <td>Rating</td>
-                        <td>Years</td>
-                    </tr>
-                    </tbody>
-                 </table>
+                <section className="invite-icon-list" id="sitter-profile-icons">
+                    <section className="invite-icon">
+                        <Dollar/>
+                        <p className="invite-address">{this.state.hourFee}$</p>
+                        <p className="invite-address">Hour fee</p>
+                    </section>
+                    <section className="invite-icon">
+                        <Star/>
+                        <p className="invite-address">{this.state.rating}</p>
+                        <p className="invite-address">Rating</p>
+                    </section>
+                    <section className="invite-icon">
+                        <Family/>
+                        <p className="invite-address">{this.state.minAge}-{this.state.maxAge}</p>
+                        <p className="invite-address">Years</p>
+                    </section>
+                </section>
                  <ReviewList allReviews={this.state.reviews}/>
                  <section className="contact-sitter">
                     <p>Have a question?<a href={mailto}>Contact {firstNameLower}</a></p>
