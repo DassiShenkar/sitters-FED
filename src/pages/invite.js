@@ -5,13 +5,14 @@ import '../styles/components/invite.scss'
 export default class Invite extends React.Component {
     constructor() {
         super();
-        this.state = {reoccurring: "none", msg: "", allergies: [], startDate: "", endDate: "", date: "2016-07-17" +
+        this.state = {reoccurring: "none", msg: "", allergies: [], personalMsg: "", startDate: "", endDate: "", date: "2016-07-17" +
         " 16:50",
             format: "YYYY-MM-DD HH:mm",
             inputFormat: "DD/MM/YYYY HH:mm",
             mode: "dateTime"};
             this.handleSubmit = this.handleSubmit.bind(this);
             this.handleAllergiesChange = this.handleAllergiesChange.bind(this);
+            this.handleMsgChange = this.handleMsgChange.bind(this);
     }
 
     onChange(reoccurring) {
@@ -32,7 +33,7 @@ export default class Invite extends React.Component {
                 date: localStorage.startDate.split(' ')[0],
                 startTime: localStorage.startDate.split(' ')[1],
                 endTime: localStorage.endDate.split(' ')[1],
-                // personalMsg: inviteInfo.personalMsg, //Todo:: add msg to schema
+                msg: this.state.personalMsg,
                 recurring: this.state.reoccurring,
                 allergies: allergiesList
 
@@ -60,6 +61,10 @@ export default class Invite extends React.Component {
 
     handleAllergiesChange(e) {
         this.setState({allergies: e.target.value});
+    }
+
+    handleMsgChange(e) {
+        this.setState({personalMsg: e.target.value});
     }
 
     render() {
@@ -91,7 +96,7 @@ export default class Invite extends React.Component {
                             <DateTimeField className="date-picker" dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleEndTimeChange.bind(this)} viewMode={mode}/>
                         </td>
                         <td>
-                            <p>Arlozorov 52 Tel Aviv</p>
+                            <p>{localStorage.address}</p>
                         </td>
                     </tr>
                     </tbody>
@@ -112,7 +117,7 @@ export default class Invite extends React.Component {
                     </div>
                 </section>
                 <textarea value={allergies} onChange={this.handleAllergiesChange} name="allergies" placeholder="enter allergy details" id="aller" cols="1" rows="1"/>
-                <textarea name="msg" placeholder="write a personal message" id="msg" cols="1" rows="1"/>
+                <textarea name="msg" onChange={this.handleMsgChange} placeholder="write a personal message" id="msg" cols="1" rows="1"/>
             </form>
         <a className="submit-invite" onClick={this.handleSubmit}>Send Invitation</a>
         </section>
