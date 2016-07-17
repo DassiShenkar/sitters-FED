@@ -136,9 +136,11 @@ export default class Invite extends React.Component {
                     </ul>
                 </section>
                 <textarea value={allergies} onChange={this.handleAllergiesChange} name="allergies" placeholder="enter allergy details" id="aller" cols="1" rows="1"/>
-                <textarea name="msg" onChange={this.handleMsgChange} placeholder="write a personal message" id="msg" cols="1" rows="1"/>
+                <textarea name="msg" onChange={this.handleMsgChange} placeholder="write a personal message" id="msg" cols="1" rows="4"/>
             </form>
-        <a className="submit-invite" onClick={this.handleSubmit}>Send Invitation</a>
+
+                <a className="submit-invite" onClick={this.handleSubmit}>Send Invitation</a>
+
         </section>
         );
     }

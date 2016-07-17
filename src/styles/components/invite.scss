@@ -75,14 +75,12 @@
   margin: 10px 0;
   font-family: "Avenir-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 28px;
-  flex: 2;
   padding: 0;
 }
 
 .rec-title {
   font-family: "Avenir-heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 32px;
-  flex: 1;
   text-align: right;
 }
 
@@ -90,7 +88,6 @@
   display: flex;
   width: 80%;
   margin: 0 auto;
-  text-align: center;
 }
 
 .child-img {
@@ -104,3 +101,26 @@
   font-size: 45px;
   margin: 0;
 }
+
+textarea[name="allergies"] , textarea[name="msg"]{
+  resize: none;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-indent: 25px;
+  padding: 22px 0;
+  font-size: 28px;
+  color: #333;
+  border: 2px solid #616569;
+  margin-bottom: 60px;
+}
+
+.invite-page a:hover, .invite-page a:focus{
+  text-decoration: none;
+  color:#fff;
+  cursor: pointer;
+}
+
+
+
