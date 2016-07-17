@@ -41,6 +41,10 @@
                     location.replace("register");
                 }
                 else {
+                    localStorage.childName = data.childes[0].name;
+                    localStorage.childPicture = 'http://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png';
+                    localStorage.address = data.address.street + ' '  + data.address.houseNumber + ' ' +
+                            data.address.city;
                     location.replace("feed"); // if registered user -> navigate to feed
                 }
             }.bind(this),

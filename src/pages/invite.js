@@ -88,13 +88,14 @@ export default class Invite extends React.Component {
 
     render() {
         const {date, format, mode, inputFormat, allergies} = this.state;
+        const sitterName = localStorage.sitterName.split(' ')[0];
         return (
         <section className="invite-page">
             <header className="invite-header">
                 <section className="invite-info">
                     <p>
                         <span>Invite&nbsp;</span>
-                        <span className="invite-sitter-name">{localStorage.sitterName}</span>
+                        <span className="invite-sitter-name">{sitterName}</span>
                         <span>&nbsp;</span>
                         <span>to take care of</span>
                     </p>
@@ -119,18 +120,20 @@ export default class Invite extends React.Component {
                 </section>
                 <section className="radio-group rec-radio">
                     <h4>Reoccurring</h4>
-                    <div>
-                        <input id="none" className="radio-inline" value="none" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "none")}/>
-                        <label htmlFor="none">None</label>
-                    </div>
-                    <div>
-                        <input id="weekly" className="radio-inline" value="weekly" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "weekly")}/>
-                        <label htmlFor="weekly">Weekly</label>
-                    </div>
-                    <div>
-                        <label htmlFor="monthly">Monthly</label>
-                        <input id="monthly" className="radio-inline" value="monthly" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "monthly")}/>
-                    </div>
+                    <ul className="reccur-radio">
+                        <li>
+                            <input id="none" className="radio-inline" value="none" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "none")}/>
+                            <label htmlFor="none">None</label>
+                        </li>
+                        <li>
+                            <input id="weekly" className="radio-inline" value="weekly" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "weekly")}/>
+                            <label htmlFor="weekly">Weekly</label>
+                        </li>
+                        <li>
+                            <input id="monthly" className="radio-inline" value="monthly" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "monthly")}/>
+                            <label htmlFor="monthly">Monthly</label>
+                        </li>
+                    </ul>
                 </section>
                 <textarea value={allergies} onChange={this.handleAllergiesChange} name="allergies" placeholder="enter allergy details" id="aller" cols="1" rows="1"/>
                 <textarea name="msg" onChange={this.handleMsgChange} placeholder="write a personal message" id="msg" cols="1" rows="1"/>
