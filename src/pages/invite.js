@@ -9,16 +9,12 @@ export default class Invite extends React.Component {
     constructor() {
         super();
         this.state = {
-            // childName: "",
-            // sitterName: "",
-            // childPicture: "",
             reoccurring: "none",
             msg: "",
-            // address: "",
             allergies: "apple, banana",
             personalMsg: "",
-            startDate: "",
-            endDate: "",
+            startDate: "2016-07-17" + " 16:50",
+            endDate: "2016-07-17" + " 16:50",
             date: "2016-07-17" + " 16:50",
             format: "YYYY-MM-DD HH:mm",
             inputFormat: "DD/MM/YYYY HH:mm",
