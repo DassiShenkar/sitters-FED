@@ -40,6 +40,10 @@ section a {
   fill: #fff;
 }
 
+.filter-btn a:hover {
+  cursor: pointer;
+}
+
 .no-date {
   display: flex;
 }
