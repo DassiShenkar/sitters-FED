@@ -57,7 +57,7 @@ export default class Invite extends React.Component {
             }.bind(this),
             error: function(xhr, status, err) {
                 //TODO: in error
-                console.error(this.props.url, status, err.toString());
+                //console.error(this.props.url, status, err.toString());
             }.bind(this)
         });
     }
