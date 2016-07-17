@@ -9,13 +9,13 @@ export default class Invite extends React.Component {
     constructor() {
         super();
         this.state = {
-            childName: "",
-            sitterName: "",
-            childPicture: "",
+            // childName: "",
+            // sitterName: "",
+            // childPicture: "",
             reoccurring: "none",
             msg: "",
-            address: "",
-            allergies: [],
+            // address: "",
+            allergies: "apple, banana",
             personalMsg: "",
             startDate: "",
             endDate: "",
@@ -29,10 +29,10 @@ export default class Invite extends React.Component {
             this.handleMsgChange = this.handleMsgChange.bind(this);
     }
 
-    componentDidMount() {
-        let name = ' ' + localStorage.sitterName.split(" ")[0] + ' ';
-        this.setState({sitterName: name, childPicture: localStorage.childPicture, childName: localStorage.childName, address: localStorage.address});
-    }
+    // componentDidMount() {
+    //     let name = ' ' + localStorage.sitterName.split(" ")[0] + ' ';
+    //     this.setState({sitterName: name, childPicture: localStorage.childPicture, childName: localStorage.childName, address: localStorage.address});
+    // }
 
     onChange(reoccurring) {
         this.setState({reoccurring: reoccurring});
@@ -87,18 +87,22 @@ export default class Invite extends React.Component {
     }
 
     render() {
-        const {date, format, mode, inputFormat, allergies, sitterName, childPicture, childName, address} = this.state;
-        const title = 'Invite' + sitterName + 'to take care of';
+        const {date, format, mode, inputFormat, allergies} = this.state;
         return (
         <section className="invite-page">
             <header className="invite-header">
                 <section className="invite-info">
-                    <p>{title}</p>
-                    <img className="child-img" src={childPicture}/>
-                    <h3 className="child-name">{childName}</h3>
+                    <p>
+                        <span>Invite&nbsp;</span>
+                        <span className="invite-sitter-name">{localStorage.sitterName}</span>
+                        <span>&nbsp;</span>
+                        <span>to take care of</span>
+                    </p>
+                    <img className="child-img" src={localStorage.childPicture}/>
+                    <h3 className="child-name">{localStorage.childName}</h3>
                 </section>
             </header>
-            <form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
+            <form className="commentForm">
                 <section className="invite-icon-list">
                     <section className="invite-icon">
                         <Calendar/>
@@ -110,7 +114,7 @@ export default class Invite extends React.Component {
                     </section>
                     <section className="invite-icon">
                         <Location/>
-                        <p className="invite-address">{address}</p>
+                        <p className="invite-address">{localStorage.address}</p>
                     </section>
                 </section>
                 <section className="radio-group rec-radio">
