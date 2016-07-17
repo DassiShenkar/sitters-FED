@@ -141,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/src/pages/invite.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+              <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -919,12 +919,12 @@
       <workItem from="1468450829506" duration="276000" />
       <workItem from="1468457918856" duration="824000" />
       <workItem from="1468479622508" duration="73352000" />
-      <workItem from="1468662759196" duration="64840000" />
+      <workItem from="1468662759196" duration="64919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177342000" />
+    <option name="totallyTimeSpent" value="177421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1380,7 +1380,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/invite.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
