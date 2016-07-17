@@ -1,16 +1,33 @@
 #login-form {
-  width: 60%;
-  margin: 48px auto;
-  text-align: center;
-}
-
-h1 {
-  font-family: "Avenir-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 48px;
-  color: #727475;
+  padding-top: 48px;
+  text-align: left;
 }
 
 .g-signin2 {
   margin: 0 auto;
   width: 120px;
 }
+
+.login-title {
+  font-size: 35px;
+  color: #333;
+  margin-bottom: 48px;
+}
+
+.login-label {
+  color: #f7a1a1;
+  font-family: "Avenir-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 28px;
+  padding-left: 10%;
+}
+
+.login-input-fields {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+}
+
+

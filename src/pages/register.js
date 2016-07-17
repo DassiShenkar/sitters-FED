@@ -3,6 +3,7 @@ import Logo from '../components/Logo';
 import '../styles/components/login.scss';
 
 
+
 export default class Login extends React.Component {
     constructor() {
         super();
@@ -47,7 +48,6 @@ export default class Login extends React.Component {
                     profilePictureURL: parentInput.childPicture.value,
                     allergies: parentInput.childAllergies.value
                 }]
-
             }),
             success: function (data) {
                 this.setState({data: data});
@@ -62,74 +62,46 @@ export default class Login extends React.Component {
 
     render() {
         return (
-            <div id="login-form" onSubmit = {this.handleSubmit}>
-                <Logo/>
-                <h1>Sign In</h1>
-                <form>
-                    <div className="form-group row">
-                        <label for="partner" className="col-sm-2 form-control-label">Partner Name</label>
-                        <div className="col-sm-10">
+            <form id="login-form">
+                <section className="invite-info">
+                    <Logo/>
+                    <h1 className="login-title">Sign In</h1>
+                </section>
+                    <ul className="login-input-fields">
+                        <li>
+                            <label className="login-label" for="partner">Partner Name</label>
                             <input type="text" name="partner-name" id="partner" ref="partner"/>
-                        </div>
-                    </div>
-                    <div className="form-group row">
-                        <label className="col-sm-2">Address</label>
-                        <div className="col-sm-10">
-                            <div className="address">
-                                <label for="city">City</label>
-                                <input type="text" id="city" ref="city"/>
-                            </div>
-                            <div className="address">
-                                <label for="street">Street</label>
-                                <input type="text" id="street" ref="street"/>
-                            </div>
-                            <div className="address">
-                                <label for="houseNumber">House Number</label>
-                                <input type="number" id="houseNumber" ref="houseNumber"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="form-group row">
-                        <label className="col-sm-2">Childes</label>
-                        <div className="multi-field-wrapper col-sm-10">
-                            <div className="multi-fields">
-                                <div className="multi-field">
-                                    <label for="name">Child Name:</label>
-                                    <input className="input name" id="name" name="prof1" type="text" placeholder="Moshe levi"
-                                                             data-items="8" ref="childName"/>
-                                    <label for="age">Age</label>
-                                    <input className="input age" id="age" name="prof1" type="number" placeholder="3" data-items="8" ref="childAge"/>
-                                    <label for="picture-child">Upload child picture</label>
-                                    <div className="form-group row">
-                                        <label className="col-sm-2">Upload Full Picture</label>
-                                        <div className="col-sm-10">
-                                            <div className="picture">
-                                                <input type="file" name="pic" className="upload_field" id="picture-child" accept="images/*" ref="childImgURL"/>
-                                                    <div className="progress_wrapper">
-                                                        <div className="progress_bar">
-                                                            <div className="text"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="thumbnails" id="childFullPicture">
-                                                        <input type="hidden" id="pictureURL"/>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <label for="allergies">Allergies</label>
-                                    <input className="input allergies" id="allergies" name="prof1" type="text"
-                                                            placeholder="avocado,bamba" ref="childAllergies"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="form-group row">
-                        <div className="col-sm-offset-2 col-sm-10">
-                            <button className="btn btn-primary">Sign In</button>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <label className="login-label" for="city">City</label>
+                            <input type="text" id="city" ref="city"/>
+                        </li>
+                        <li>
+                            <label className="login-label" for="street">Street</label>
+                            <input type="text" id="street" ref="street"/>
+                        </li>
+                        <li>
+                            <label className="login-label" for="houseNumber">House Number</label>
+                            <input type="number" id="houseNumber" ref="houseNumber"/>
+                        </li>
+                        <li>
+                            <label className="login-label" for="name">Child Name:</label>
+                            <input className="input name" id="name" name="prof1" type="text" placeholder="Moshe levi"
+                                   data-items="8" ref="childName"/>
+                        </li>
+                        <li>
+                            <label className="login-label" or="age">Age</label>
+                            <input className="input age" id="age" name="prof1" type="number" placeholder="3" data-items="8" ref="childAge"/>
+                        </li>
+                        <li>
+                            <label className="login-label" for="allergies">Allergies</label>
+                            <input className="input allergies" id="allergies" name="prof1" type="text"
+                                   placeholder="avocado,bamba" ref="childAllergies"/>
+                        </li>
+                    </ul>
+                <a className="submit-invite" onClick={this.handleSubmit}>Sign In</a>
                 </form>
-            </div>
+
         );
     }
 }

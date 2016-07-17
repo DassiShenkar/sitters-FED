@@ -18,6 +18,7 @@
   margin-top: -4px;
   margin-right: 15px;
   margin-left: 40px;
+  transform: scale(2);
 }
 
 .reccur-radio label {
@@ -102,7 +103,7 @@
   margin: 0;
 }
 
-textarea[name="allergies"] , textarea[name="msg"]{
+textarea[name="allergies"] , textarea[name="msg"], input[type="text"], input[type="number"]{
   resize: none;
   display: block;
   width: 80%;
