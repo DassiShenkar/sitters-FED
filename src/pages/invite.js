@@ -119,7 +119,7 @@ export default class Invite extends React.Component {
                     </section>
                 </section>
                 <section className="radio-group rec-radio">
-                    <h4>Reoccurring</h4>
+                    <h4 className="rec-title">Reoccurring</h4>
                     <ul className="reccur-radio">
                         <li>
                             <input id="none" className="radio-inline" value="none" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "none")}/>

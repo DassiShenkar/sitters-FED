@@ -16,6 +16,15 @@
 
 .reccur-radio input {
   margin-top: -4px;
+  margin-right: 15px;
+  margin-left: 40px;
+}
+
+.reccur-radio label {
+  color: #f7a1a1;
+  font-family: "Avenir-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 28px;
 }
 
 .selected-sitter {
@@ -45,6 +54,8 @@
 
 .invite-icon-list {
   display: flex;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .invite-header {
@@ -61,10 +72,25 @@
 .reccur-radio {
   display: flex;
   list-style-type: none;
+  margin: 10px 0;
+  font-family: "Avenir-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  flex: 2;
+  padding: 0;
+}
+
+.rec-title {
+  font-family: "Avenir-heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  flex: 1;
+  text-align: right;
 }
 
 .rec-radio {
   display: flex;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .child-img {
