@@ -31,12 +31,12 @@ section a {
   text-align: end;
 }
 
-svg {
+.filter-btn svg {
   width: 110px;
   height: 110px;
 }
 
-svg path {
+.filter-btn svg path {
   fill: #fff;
 }
 
@@ -46,6 +46,7 @@ svg path {
 
 .input-group {
   width: 30%;
+  margin: 0 auto;
 }
 
 .greeting {

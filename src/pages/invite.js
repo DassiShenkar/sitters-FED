@@ -1,5 +1,8 @@
 import React from 'react';
 import DateTimeField from 'react-bootstrap-datetimepicker';
+import Clock from '../styles/icons/Clock';
+import Calendar from '../styles/icons/Calendar';
+import Location from '../styles/icons/Location';
 import '../styles/components/invite.scss'
 
 export default class Invite extends React.Component {
@@ -69,38 +72,31 @@ export default class Invite extends React.Component {
 
     render() {
         const {date, format, mode, inputFormat, allergies} = this.state;
-        const sitterName = localStorage.sitterName.split(" ")[0];
+        const sitterName = ' ' + localStorage.sitterName.split(" ")[0] + ' ';
         return (
-        <section>
-            <header>
-                <p>Invite <strong>{sitterName}</strong> to take care of</p>
-                <img src={localStorage.childPicture}/>
-                <h3>{localStorage.childName}</h3>
+        <section className="invite-page">
+            <header className="invite-header">
+                <section className="invite-info">
+                    <p className="invite-headline">Invite<strong>{sitterName}</strong>to take care of</p>
+                    <img className="child-img" src={localStorage.childPicture}/>
+                    <h3 className="child-name">{localStorage.childName}</h3>
+                </section>
             </header>
             <form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
-                <table className="tableInfo">
-                    <thead>
-                    <th className="dollar">
-                    </th>
-                    <th className="dollar">
-                    </th>
-                    <th className="family">
-                    </th>
-                    </thead>
-                    <tbody>
-                    <tr className="middleRow">
-                        <td>
-                            <DateTimeField className="date-picker" dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleStartTimeChange.bind(this)} viewMode={mode}/>
-                        </td>
-                        <td>
-                            <DateTimeField className="date-picker" dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleEndTimeChange.bind(this)} viewMode={mode}/>
-                        </td>
-                        <td>
-                            <p>{localStorage.address}</p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                <section className="invite-icon-list">
+                    <section className="invite-icon">
+                        <Calendar/>
+                        <DateTimeField className="date-picker" dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleStartTimeChange.bind(this)} viewMode={mode}/>
+                    </section>
+                    <section className="invite-icon">
+                        <Clock/>
+                        <DateTimeField className="date-picker" dateTime={date} format={format} inputFormat={inputFormat} onChange={this.handleEndTimeChange.bind(this)} viewMode={mode}/>
+                    </section>
+                    <section className="invite-icon">
+                        <Location/>
+                        <p className="invite-address">{localStorage.address}</p>
+                    </section>
+                </section>
                 <section className="radio-group rec-radio">
                     <h4>Reoccurring</h4>
                     <div>
