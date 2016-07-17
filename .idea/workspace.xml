@@ -26,7 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/invite.js" afterPath="$PROJECT_DIR$/src/pages/invite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/register.js" afterPath="$PROJECT_DIR$/src/pages/register.js" />
     </list>
     <ignored path="webpack-heroku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invite.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="invite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/invite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="255">
               <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/register.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="114" />
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -219,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/components/ListHeader.js" />
         <option value="$PROJECT_DIR$/src/styles/components/sitterProfile.scss" />
         <option value="$PROJECT_DIR$/src/pages/sitters.js" />
-        <option value="$PROJECT_DIR$/src/pages/register.js" />
         <option value="$PROJECT_DIR$/src/styles/icons/Calendar.js" />
         <option value="$PROJECT_DIR$/src/styles/icons/Clock.js" />
         <option value="$PROJECT_DIR$/src/styles/icons/Location.js" />
@@ -229,6 +228,7 @@
         <option value="$PROJECT_DIR$/src/styles/components/invite.scss" />
         <option value="$PROJECT_DIR$/src/styles/components/feed.scss" />
         <option value="$PROJECT_DIR$/src/pages/invite.js" />
+        <option value="$PROJECT_DIR$/src/pages/register.js" />
       </list>
     </option>
   </component>
@@ -926,12 +926,12 @@
       <workItem from="1468450829506" duration="276000" />
       <workItem from="1468457918856" duration="824000" />
       <workItem from="1468479622508" duration="73352000" />
-      <workItem from="1468662759196" duration="56301000" />
+      <workItem from="1468662759196" duration="56380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168803000" />
+    <option name="totallyTimeSpent" value="168882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1292,14 +1292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1360,11 +1352,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/invite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="255">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

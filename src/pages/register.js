@@ -18,7 +18,7 @@ export default class Login extends React.Component {
             houseNumber: this.refs.houseNumber,
             childName: this.refs.childName,
             childAge: this.refs.childAge,
-            childPicture: 'http://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png',
+            childPicture: 'https://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png',
             childAllergies: this.refs.childAllergies
         };
         console.log(this.refs.childName.value);
