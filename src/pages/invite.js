@@ -15,12 +15,12 @@ export default class Invite extends React.Component {
             personalMsg: "",
             startDate: "",
             endDate: "",
-            date: "2016-07-17" + " 16:50",
+            date: "2016-07-17 16:50",
             format: "YYYY-MM-DD HH:mm",
             inputFormat: "DD/MM/YYYY HH:mm",
             mode: "dateTime"
         };
-            localStorage.startDate = "2016-07-17" + " 16:50";
+            localStorage.startDate = "2016-07-17 16:50";
             this.handleSubmit = this.handleSubmit.bind(this);
             this.handleAllergiesChange = this.handleAllergiesChange.bind(this);
             this.handleMsgChange = this.handleMsgChange.bind(this);
