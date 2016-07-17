@@ -8,7 +8,7 @@ import '../styles/components/invite.scss'
 export default class Invite extends React.Component {
     constructor() {
         super();
-        this.state = {reoccurring: "none", msg: "", allergies: [], personalMsg: "", startDate: "", endDate: "", date: "2016-07-17" +
+        this.state = {sitterName: "", reoccurring: "none", msg: "", allergies: [], personalMsg: "", startDate: "", endDate: "", date: "2016-07-17" +
         " 16:50",
             format: "YYYY-MM-DD HH:mm",
             inputFormat: "DD/MM/YYYY HH:mm",
@@ -16,6 +16,11 @@ export default class Invite extends React.Component {
             this.handleSubmit = this.handleSubmit.bind(this);
             this.handleAllergiesChange = this.handleAllergiesChange.bind(this);
             this.handleMsgChange = this.handleMsgChange.bind(this);
+    }
+
+    componentDidMount() {
+        let name = ' ' + localStorage.sitterName.split(" ")[0] + ' ';
+        this.setState({sitterName: name});
     }
 
     onChange(reoccurring) {
@@ -72,12 +77,12 @@ export default class Invite extends React.Component {
 
     render() {
         const {date, format, mode, inputFormat, allergies} = this.state;
-        const sitterName = ' ' + localStorage.sitterName.split(" ")[0] + ' ';
+        // const sitterName = ' ' + localStorage.sitterName.split(" ")[0] + ' ';
         return (
         <section className="invite-page">
             <header className="invite-header">
                 <section className="invite-info">
-                    <p className="invite-headline">Invite<strong>{sitterName}</strong>to take care of</p>
+                    <p className="take-care">Invite<span className="selected-sitter">{this.state.sitterName}</span>to take care of</p>
                     <img className="child-img" src={localStorage.childPicture}/>
                     <h3 className="child-name">{localStorage.childName}</h3>
                 </section>
