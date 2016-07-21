@@ -22,9 +22,7 @@
         localStorage.email = profile.getEmail();
         localStorage.profilePicture = profile.getImageUrl();
 //        localStorage.token = (googleUser.getAuthResponse().id_token).substring(0 ,7);
-
-
-        var user;
+        
         $.ajax({
             url: 'https://sitters-ws.herokuapp.com/getUser',
             dataType: 'json',
@@ -33,16 +31,22 @@
             data: JSON.stringify({'email': profile.getEmail()}),
             success: function (data) {
                 if (!data.user) {    // if not registered -> navigate to register
-                    console.log(data);
                     location.replace("register");
                 }
                 else {
                     let user = data.user;
-                    console.log(user);
-                    localStorage.childName = user.childes[0].name;
-                    localStorage.childPicture = 'http://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png';
-                    localStorage.address = user.address.street + ' '  + user.address.houseNumber + ' ' +
-                            user.address.city;
+                    if(data.isParent) {
+                        localStorage.childName = user.childes[0].name;
+                        localStorage.childPicture = 'http://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png';
+                        localStorage.address = user.address.street + ' '  + user.address.houseNumber + ' ' +
+                                user.address.city;
+
+                    }
+                    else {
+                        console.log("sitter");
+                        location.replace("sitter");
+                    }
+
                     location.replace("feed"); // if registered user -> navigate to feed
                 }
             }.bind(this),
