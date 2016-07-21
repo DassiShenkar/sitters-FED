@@ -103,7 +103,7 @@ export default class FilterList extends React.Component {
 
     loadSittersByGender(gender) {
         $.ajax({
-            url: 'https://sitters-ws.herokuapp.com/getSitterByGender',
+            url: 'https://sitters-ws.herokuapp.com/getSittersByGender',
             dataType: 'json',
             type : 'post',
             contentType: 'application/json',
