@@ -1,12 +1,13 @@
 @import "review.scss";
+@import "../colors";
 
 .sitter-wrapper a:hover, a:focus{
   text-decoration: none;
-  color: #fff;
+  color: $white;
 }
 
 img.fullPicture {
-  border: 6px solid #fff;
+  border: 6px solid $white;
 }
 
 .profilePicture p{
@@ -22,19 +23,19 @@ img.fullPicture {
 .knowMore p{
   font-family: "Avenir-heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 42px;
+  flex: 1;
 }
 .knowMore a{
   font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 30px;
   text-decoration: none;
-  color: #fff;
-  padding-left: 15px;
+  color: $white;
   padding-top: 12px;
 }
 
 .profilePicture{
   padding-top: 50px;
-  margin-left: 5.3%;
+  margin: 0 5.3%;
   padding-bottom: 40px;
 }
 
@@ -116,13 +117,6 @@ img.fullPicture {
   color: #393e44;
 }
 
-.sitterInfo svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
 .review-container {
   display: flex;
   flex-direction: row;
@@ -161,29 +155,23 @@ img.fullPicture {
   display: block;
 }
 
-.icon-container {
-  width: 50%;
-  height: 0;
-  position: relative;
-}
-
 .contact-sitter a {
   text-decoration: none;
-  color: #f7a1a1;
+  color: $pink;
   margin-left: 15px;
 
 }
 
 .contact-sitter a:visited{
-  color: #f7a1a1;
+  color: $pink;
 }
 
 .contact-sitter a:hover{
-  color: #c06d6d;
+  color: $dark-pink;
 }
 
 .contact-sitter p {
-  color: #616569;
+  color: $grey;
   font-size: 28px;
   font-family: "Avenir-heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -192,9 +180,9 @@ img.fullPicture {
 .submit-invite {
   font-size:40px;
   font-family: "Avenir-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
+  color: $white;
   margin-top:106px;
-  background: #f7a1a1;
+  background: $pink;
   display: block;
   text-align: center;
   padding: 30px 0;
@@ -224,4 +212,13 @@ th.icon svg {
 
 #sitter-profile-icons{
   margin-top: 100px;
+}
+
+.icon-container svg {
+  width: 56px;
+  height: 56px;
+}
+
+.icon-container path {
+  fill: $yellow;
 }

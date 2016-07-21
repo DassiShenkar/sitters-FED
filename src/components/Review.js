@@ -1,4 +1,5 @@
 import React from 'react';
+import Star from '../styles/icons/Star';
 import '../styles/components/review.scss'
 
 export default class Review extends React.Component {
@@ -14,6 +15,7 @@ export default class Review extends React.Component {
                     <img className="parent-picture" src={review.pictureParent}/>
                     <section className="sitterInfo">
                         <div className="icon-container">
+                            <Star/>
                         </div>
                         <section class="review-details">
                             <p className="reviewRating">{review.rating} </p>

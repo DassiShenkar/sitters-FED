@@ -1,10 +1,7 @@
 @import "filters";
 @import "listHeader";
 @import "sitter";
-
-$baby-blue:  #7ad0f8;
-$light-green: #88d685;
-$pink: #f7a1a1;
+@import "../colors";
 
 h2 {
   margin: 0;
@@ -12,7 +9,7 @@ h2 {
 
 header {
   background: $baby-blue;
-  color: #fff;
+  color: $white;
 }
 
 .parent-profile {
@@ -37,7 +34,7 @@ section a {
 }
 
 .filter-btn svg path {
-  fill: #fff;
+  fill: $white;
 }
 
 .filter-btn a:hover {
@@ -66,11 +63,11 @@ section a {
 
 .profile {
   border-radius: 50%;
-  border: 6px solid #fff;
+  border: 6px solid $white;
 }
 
 .filter {
-  background-color: #fff;
+  background-color: $white;
   height: 100px;
 }
 

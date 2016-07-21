@@ -1,3 +1,5 @@
+@import "../colors";
+
 .sitter {
   height: 545px;
 }
@@ -13,7 +15,7 @@ img.sitter-profile {
   font-size: 50px;
   text-align: center;
   margin: 22px 0 0 0;
-  color: #fff;
+  color: $white;
 }
 
 a.sitter-item {
@@ -23,7 +25,7 @@ a.sitter-item {
 .sitter-score {
   display: flex;
   flex-direction: row-reverse;
-  color: #fff;
+  color: $white;
   height: 171px;
   text-align: right;
   list-style-type: none;
@@ -42,5 +44,5 @@ a.sitter-item {
 }
 
 .rating-star-container path {
-  fill: #fff;
+  fill: $white;
 }

@@ -1,3 +1,5 @@
+@import "../colors";
+
 .list-header {
   padding: 0 5.3%;
 }
@@ -8,20 +10,20 @@
 
 .list-title {
   font-size: 70px;
-  color: #fff;
+  color: $white;
 }
 
 .list-header-sitters-available-now, .list-header-sitters-favorites {
-  background: #87ccfa;
+  background: $baby-blue;
   padding: 5.3%;
 }
 
 .list-header-sitters-top-rated, .list-header-sitters-gender {
-  background: #f7a1a1;
+  background: $pink;
   padding: 5.3%;
 }
 
 .list-header-sitters-working-hours, .list-header-sitters-see-all {
-  background: #88d685;
+  background: $light-green;
   padding: 5.3%;
 }

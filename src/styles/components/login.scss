@@ -1,3 +1,5 @@
+@import "../colors";
+
 #login-form {
   text-align: center;
   margin-top: 100px;
@@ -15,12 +17,12 @@
 
 .login-title {
   font-size: 35px;
-  color: #333;
+  color: $dark-grey;
   margin-bottom: 48px;
 }
 
 .login-label {
-  color: #f7a1a1;
+  color: $pink;
   font-family: "Avenir-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 28px;
@@ -37,6 +39,6 @@
 
 #register-form a:hover, #register-form a:focus{
   text-decoration: none;
-  color:#fff;
+  color: $white;
   cursor: pointer;
 }
