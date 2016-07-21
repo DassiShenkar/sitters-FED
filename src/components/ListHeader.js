@@ -11,7 +11,8 @@ export default class Sitter extends React.Component {
         const secondTitle = this.props.title.split(" ")[1];
         return (
             <section className= {listClassName}>
-                <div className="icon star-container"></div>
+                <div className="icon star-container">
+                </div>
                 <section className="category">
                     <h2 className="list-title">{firstTitle}</h2>
                     <h2 className="list-title">{secondTitle}</h2>

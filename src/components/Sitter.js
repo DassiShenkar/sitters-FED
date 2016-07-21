@@ -1,4 +1,5 @@
 import React from 'react';
+import Star from '../styles/icons/Star';
 import '../styles/components/sitter.scss';
 
 export default class Sitter extends React.Component {
@@ -14,7 +15,8 @@ export default class Sitter extends React.Component {
                 <section className="sitter" style={css}>
                         <ul className="sitter-score">
                             <li>
-                                <div className="star-container">
+                                <div className="rating-star-container">
+                                    <Star/>
                                 </div>
                             </li>
                             <li>

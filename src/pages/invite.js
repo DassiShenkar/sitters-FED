@@ -56,7 +56,7 @@ export default class Invite extends React.Component {
                 location.replace("feed");
             }.bind(this),
             error: function(xhr, status, err) {
-                location.replace("feed");
+                console.log(err.toString());
             }.bind(this)
         });
     }
