@@ -4,6 +4,7 @@ import '../styles/components/sitterProfile.scss';
 import Dollar from '../styles/icons/Dollar';
 import Star from '../styles/icons/Star';
 import Family from '../styles/icons/Family';
+import Envelope from '../styles/icons/Envelope';
 
 export default class SitterProfile extends React.Component {
 
@@ -75,6 +76,7 @@ export default class SitterProfile extends React.Component {
                 </section>
                  <ReviewList allReviews={this.state.reviews}/>
                  <section className="contact-sitter">
+                     <Envelope/>
                     <p>Have a question?<a href={mailto}>Contact {firstNameLower}</a></p>
                 </section>
                 <a className="submit-invite" href={inviteLink}>Book now</a>
