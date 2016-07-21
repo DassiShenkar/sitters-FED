@@ -26,20 +26,23 @@
 
         var user;
         $.ajax({
-            url: 'https://sitters-ws.herokuapp.com/getParentByEmail',
+            url: 'https://sitters-ws.herokuapp.com/getUser',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify({'email': profile.getEmail()}),
             success: function (data) {
-                if (data.Error) {    // if not registered -> navigate to register
+                if (!data.user) {    // if not registered -> navigate to register
+                    console.log(data);
                     location.replace("register");
                 }
                 else {
-                    localStorage.childName = data.childes[0].name;
+                    let user = data.user;
+                    console.log(user);
+                    localStorage.childName = user.childes[0].name;
                     localStorage.childPicture = 'http://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png';
-                    localStorage.address = data.address.street + ' '  + data.address.houseNumber + ' ' +
-                            data.address.city;
+                    localStorage.address = user.address.street + ' '  + user.address.houseNumber + ' ' +
+                            user.address.city;
                     location.replace("feed"); // if registered user -> navigate to feed
                 }
             }.bind(this),
