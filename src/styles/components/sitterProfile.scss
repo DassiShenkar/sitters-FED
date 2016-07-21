@@ -51,43 +51,9 @@ img.fullPicture {
   background: #444444;
 }
 
-.icon {
-  width: 48px;
-  height: 48px;
-}
-
-.dollar {
-
-}
-
 .family {
   transform: scale(-1, 1);
 }
-
-.tableInfo{
-  width:500px;
-  height: 145px;
-  margin: 0px auto;
-  margin-top: 60px;
-  font-family: "Avenir-book", "Helvetica", Helvetica, Arial, sans-serif;
-}
-
-.tableInfo tr{
-  margin: 0px auto;
-}
-
-.tableInfo td{
-  text-align: center;
-}
-
-.middleRow{
-  margin-top: 23px;
-}
-
-.lastRow{
-  margin-top:10px;
-}
-
 
 .sitter-header{
   width: 750px;
@@ -95,7 +61,7 @@ img.fullPicture {
 }
 
 .sitterInfo {
-  margin-left: 10px;
+  margin-left: 2%;
 }
 
 .reviewDate, .reviewName {
@@ -188,30 +154,13 @@ img.fullPicture {
   padding: 30px 0;
 }
 
-th.icon {
-  width: 25%;
-  height: 0;
-  padding-top: 48%;
-  position: relative;
-}
-
-th.icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.tableInfo, section.review-list {
+section.review-list {
   color: #6b6f74;
 }
 
-.tableInfo td {
-  font-size: 32px;
-  font-family: "Avenir-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 
 #sitter-profile-icons{
-  margin-top: 100px;
+  margin: 75px auto;
 }
 
 .icon-container svg {

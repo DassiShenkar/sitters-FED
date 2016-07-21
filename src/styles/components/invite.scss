@@ -32,6 +32,8 @@
   font-size: 32px;
   text-align: center;
   color: $grey;
+  margin-bottom: 0;
+  line-height: 120%;
 }
 
 .invite-icon {
@@ -39,8 +41,9 @@
 }
 
 .invite-icon svg {
-  width: 100px;
-  margin: auto;
+  width: 96px;
+  height: 96px;
+  margin: 25px auto;
   display: block;
 }
 
