@@ -1,13 +1,13 @@
 import React from 'react';
-// import ProfileImg from '../components/ProfileImg';
-// import FilterList from '../components/FilterList';
-// import SitterList from '../components/SitterList';
-// import Filter from '../styles/icons/Filter';
-// import '../styles/components/feed.scss';
+ import InvitesList from '../components/InvitesList';
+
 
 export default class Sitter extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            invites: []
+        }
 
     }
 
@@ -23,6 +23,10 @@ export default class Sitter extends React.Component {
             contentType: 'application/json',
             data: JSON.stringify({ 'email': localStorage.email}),
             success: function (data) {
+                this.setState({invites: data.invites,reviews: data.reviews, name: data.name, minAge: data.minAge, hourFee: data.hourFee,
+                    maxAge: data.maxAge, rating: data.rating, sitterEmail: data.email, sitterPicture: data.fullPictureURL});
+                localStorage.sitterEmail = data.email;
+                localStorage.sitterName = data.name;
                 //this.setState({topSitters: data});
                 //console.log(data);
             }.bind(this),
@@ -34,8 +38,19 @@ export default class Sitter extends React.Component {
 
     render() {
         return (
-            <div>
-                Hello World
+            <div className="sitter-wrapper">
+                <header>
+                    <section className="profilePicture">
+                        <section className="hello">
+                            <p >Hello</p>
+                            <h3 className="sitter-name">{this.state.name}</h3>
+                        </section>
+                        <section className="invitesNumber">
+                            <p >You got {this.state.invites.length} Invites</p>
+                        </section>
+                    </section>
+                </header>
+                <InvitesList allInvites={this.state.invites}/>
             </div>
         );
     }
