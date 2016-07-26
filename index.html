@@ -35,19 +35,17 @@
                 }
                 else {
                     let user = data.user;
+                    console.log(data.isParent);
                     if(data.isParent) {
                         localStorage.childName = user.childes[0].name;
                         localStorage.childPicture = 'http://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png';
                         localStorage.address = user.address.street + ' '  + user.address.houseNumber + ' ' +
                                 user.address.city;
-
+                        location.replace("feed"); // if registered user -> navigate to feed
                     }
                     else {
-                        console.log("sitter");
                         location.replace("sitter");
                     }
-
-                    location.replace("feed"); // if registered user -> navigate to feed
                 }
             }.bind(this),
             error: function (xhr, status, err) { // if sign in failed -> print error msg
