@@ -6,6 +6,7 @@ import Register from './src/pages/register'
 import Feed from './src/pages/feed'
 import SitterProfile from './src/pages/sitters'
 import Invite from './src/pages/invite'
+import Sitter from './src/pages/sitter'
 
 render((
     <Router history={browserHistory}>
@@ -14,5 +15,6 @@ render((
         <Route path="/feed" component={Feed}/>
         <Route path="/sitters/:sitter" component={SitterProfile}/>
         <Route path="/sendInvite" component={Invite}/>
+        <Route path="/sitter" component={Sitter}/>
     </Router>
 ), document.getElementById('app'));

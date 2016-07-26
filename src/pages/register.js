@@ -42,7 +42,6 @@ export default class Login extends React.Component {
     }
 
     handleSubmitSitter(e){
-        console.log(this.state.workingHours);
         e.preventDefault();
         let sitterInput = {
             minAge : this.refs.minAge,
@@ -81,7 +80,7 @@ export default class Login extends React.Component {
             }),
             success: function (data) {
                 this.setState({data: data});
-                location.replace("feed");
+                location.replace("sitter");
             }.bind(this),
             error: function(xhr, status, err) {
                 //TODO: in error
