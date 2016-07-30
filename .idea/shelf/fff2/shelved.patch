@@ -4,7 +4,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 --- .idea/workspace.xml	(date 1468282582000)
-+++ .idea/workspace.xml	(revision )
++++ .idea/workspace.xml	
 @@ -26,12 +26,7 @@
    </component>
    <component name="ChangeListManager">

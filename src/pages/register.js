@@ -56,6 +56,7 @@ export default class Login extends React.Component {
         //localStorage.address = parentInput.street.value + " " + parentInput.houseNumber.value + " " +parentInput.city.value;
        // localStorage.childName = parentInput.childName.value;
         //localStorage.childPicture = parentInput.childPicture;
+        //TODO: think what to store in sitter flow
         localStorage.isParent = 0;
         $.ajax({
             url: 'https://sitters-ws.herokuapp.com/insertSitter',
@@ -101,7 +102,6 @@ export default class Login extends React.Component {
             childPicture: 'https://res.cloudinary.com/sitters/image/upload/v1468710872/fnfbhef444t4jtg4_qlszzb.png',
             childAllergies: this.refs.childAllergies
         };
-        console.log(this.refs.childName.value);
         localStorage.address = parentInput.street.value + " " + parentInput.houseNumber.value + " " +parentInput.city.value;
         localStorage.childName = parentInput.childName.value;
         localStorage.childPicture = parentInput.childPicture;
@@ -149,33 +149,33 @@ export default class Login extends React.Component {
                 <ul className="login-input-fields">
                     <li>
                         <label className="login-label" for="partner">Partner Name</label>
-                        <input type="text" name="partner-name" id="partner" ref="partner"/>
+                        <input type="text" name="partner-name" id="partner" ref="partner" required placeholder="Moshe Levi"/>
                     </li>
                     <li>
                         <label className="login-label" for="city">City</label>
-                        <input type="text" id="city" ref="city"/>
+                        <input type="text" id="city" ref="city" required placeholder="Tel Aviv"/>
                     </li>
                     <li>
                         <label className="login-label" for="street">Street</label>
-                        <input type="text" id="street" ref="street"/>
+                        <input type="text" id="street" ref="street" required placeholder="Arlozorov"/>
                     </li>
                     <li>
                         <label className="login-label" for="houseNumber">House Number</label>
-                        <input type="number" id="houseNumber" ref="houseNumber"/>
+                        <input type="number" id="houseNumber" ref="houseNumber" required min="0" max="350" placeholder="36"/>
                     </li>
                     <li>
                         <label className="login-label" for="name">Child Name:</label>
-                        <input className="input name" id="name" name="prof1" type="text" placeholder="Moshe levi"
-                               data-items="8" ref="childName"/>
+                        <input className="input name" id="name" name="prof1" type="text" placeholder="Beni levi"
+                               data-items="8" ref="childName" required/>
                     </li>
                     <li>
                         <label className="login-label" or="age">Age</label>
-                        <input className="input age" id="age" name="prof1" type="number" placeholder="3" data-items="8" ref="childAge"/>
+                        <input className="input age" id="age" name="prof1" type="number" placeholder="3" data-items="8" ref="childAge" required min="0" max="120"/>
                     </li>
                     <li>
                         <label className="login-label" for="allergies">Allergies</label>
                         <input className="input allergies" id="allergies" name="prof1" type="text"
-                               placeholder="avocado,bamba" ref="childAllergies"/>
+                               placeholder="avocado,bamba" ref="childAllergies" required/>
                     </li>
                 </ul>
                 <a className="submit-invite" onClick={this.handleSubmitParent}>Sign In</a>
@@ -187,27 +187,27 @@ export default class Login extends React.Component {
                     <ul className="login-input-fields">
                         <li>
                             <label className="login-label" for="city">City</label>
-                            <input type="text" id="city" ref="city"/>
+                            <input type="text" id="city" ref="city" required placeholder="Tel Aviv"/>
                         </li>
                         <li>
                             <label className="login-label" for="street">Street</label>
-                            <input type="text" id="street" ref="street"/>
+                            <input type="text" id="street" ref="street" required placeholder="Arlozorov"/>
                         </li>
                         <li>
                             <label className="login-label" for="houseNumber">House Number</label>
-                            <input type="number" id="houseNumber" ref="houseNumber"/>
+                            <input type="number" id="houseNumber" ref="houseNumber" required min="0" max="350" placeholder="56"/>
                         </li>
                         <li>
                             <label className="login-label" for="min-age">Minimum Age</label>
-                            <input className="input name" id="min-age"  type="number" placeholder="1" ref="minAge"/>
+                            <input className="input name" id="min-age"  type="number" placeholder="1" ref="minAge" required min="0" max="120"/>
                         </li>
                         <li>
                             <label className="login-label" for="max-age">Maximum Age</label>
-                            <input className="input age" id="max-age"  type="number" placeholder="4"  ref="maxAge"/>
+                            <input className="input age" id="max-age"  type="number" placeholder="4"  ref="maxAge" required min="0" max="120"/>
                         </li>
                         <li>
                             <label className="login-label" for="hour-fee">Hour Fee</label>
-                            <input className="input age" id="hour-fee"  type="number" placeholder="25"  ref="hourFee"/>
+                            <input className="input age" id="hour-fee"  type="number" placeholder="25"  ref="hourFee"required min="1" max="400"/>
                         </li>
                         <li className="filter-option">
                             <label htmlFor="male">Male</label>
@@ -231,7 +231,10 @@ export default class Login extends React.Component {
                             <input id="allDay" value="allDay" type="radio" checked={this.state.workingHours === "All day"} name="hours-radio" onChange={this.onChangeHours.bind(this, "All day")}/>
                         </li>
                     </ul>
-                    <a className="submit-invite" onClick={this.handleSubmitSitter}>Sign In</a>
+                   <a className="submit-invite" onClick={this.handleSubmitSitter}>
+                       <input type="submit"/>
+                       Sign In
+                   </a>
                 </form>;
         }
         return (
