@@ -10,10 +10,11 @@ export default class SittersList extends React.Component {
     render() {
         const listTitle = this.props.title;
         const listClass = this.props.className;
+        const icon = this.props.icon;
         const sitterNodes = this.props.sittersData.map((sitter, index) => <Sitter key={index} name={sitter.name} email={sitter.email} rating={sitter.rating} profilePictureURL={sitter.profilePictureURL} fullPictureURL={sitter.fullPictureURL}/>);
         return (
             <div>
-                <ListHeader title={listTitle} className={listClass}/>
+                <ListHeader title={listTitle} className={listClass} icon={icon}/>
                 <div className="sitter-list">{sitterNodes}</div>
             </div>
         );

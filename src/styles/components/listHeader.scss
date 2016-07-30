@@ -8,6 +8,15 @@
   padding: 10px 0 30px 0;
 }
 
+.list-header-icon {
+  width: 96px;
+  height: 96px;
+}
+
+.list-header-icon path, rect {
+  fill: $white;
+}
+
 .list-title {
   font-size: 70px;
   color: $white;

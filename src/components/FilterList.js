@@ -1,7 +1,6 @@
 import React from "react";
 import StarRatingComponent from 'react-star-rating-component';
 import SitterList from '../components/SitterList';
-// import Bell from '../styles/icons/Bell';
 import '../styles/components/filters.scss';
 
 export default class FilterList extends React.Component {
@@ -176,22 +175,22 @@ export default class FilterList extends React.Component {
     render() {
         let available, favorites, topRated, workingHours, gender, seeAll;
         if(this.state.availableSitters && this.state.selectedFilter === "availableNow") {
-            available = <SitterList className="sitters-available-now" title="AVAILABLE NOW" sittersData={this.state.availableSitters}/>;
+            available = <SitterList className="sitters-available-now" title="AVAILABLE NOW" icon="bell" sittersData={this.state.availableSitters}/>;
         }
         if(this.state.topSitters && this.state.selectedFilter === "topSitters") {
-            topRated = <SitterList className="sitters-top-rated" title="TOP RATED" sittersData={this.state.topSitters}/>;
+            topRated = <SitterList className="sitters-top-rated" title="TOP RATED" icon="star" sittersData={this.state.topSitters}/>;
         }
         if(this.state.sittersByHours && this.state.selectedFilter === "workingHours") {
-            workingHours = <SitterList className="sitters-working-hours" title="WORKING HOURS" sittersData={this.state.sittersByHours}/>;
+            workingHours = <SitterList className="sitters-working-hours" icon="clock" title="WORKING HOURS" sittersData={this.state.sittersByHours}/>;
         }
         if(this.state.favoriteSitters && this.state.selectedFilter === "favorites") {
-            favorites = <SitterList className="sitters-favorites" title="MY FAVORITES" sittersData={this.state.favoriteSitters}/>;
+            favorites = <SitterList className="sitters-favorites" icon="heart" title="MY FAVORITES" sittersData={this.state.favoriteSitters}/>;
         }
         if(this.state.sittersByGender && (this.state.selectedFilter === "gender")) {
-            gender = <SitterList className="sitters-gender" title="GENDER" sittersData={this.state.sittersByGender}/>;
+            gender = <SitterList className="sitters-gender" icon="gender" title="GENDER" sittersData={this.state.sittersByGender}/>;
         }
         if(this.state.allSitters && this.state.selectedFilter === "seeAll") {
-            seeAll = <SitterList className="sitters-see-all" title="ALL" sittersData={this.state.allSitters}/>;
+            seeAll = <SitterList className="sitters-see-all" icon="all" title="ALL" sittersData={this.state.allSitters}/>;
         }
         return (
             <div className="filter-list" onChange={this.onChange.bind(this)}>
