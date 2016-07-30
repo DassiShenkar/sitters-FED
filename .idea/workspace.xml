@@ -24,20 +24,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/logo_sitters_blue.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/icons/All.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/icons/Gender.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/icons/Heart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bundle.js" afterPath="$PROJECT_DIR$/public/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bundle.js.map" afterPath="$PROJECT_DIR$/public/bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/FilterList.js" afterPath="$PROJECT_DIR$/src/components/FilterList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ListHeader.js" afterPath="$PROJECT_DIR$/src/components/ListHeader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SitterList.js" afterPath="$PROJECT_DIR$/src/components/SitterList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/feed.js" afterPath="$PROJECT_DIR$/src/pages/feed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/components/listHeader.scss" afterPath="$PROJECT_DIR$/src/styles/components/listHeader.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/icons/Bell.js" afterPath="$PROJECT_DIR$/src/styles/icons/Bell.js" />
     </list>
     <ignored path="webpack-heroku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -912,7 +899,7 @@
       <workItem from="1468479622508" duration="73352000" />
       <workItem from="1468662759196" duration="65051000" />
       <workItem from="1469101810948" duration="14123000" />
-      <workItem from="1469881655942" duration="135000" />
+      <workItem from="1469881655942" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="favicon">
       <created>1469881684483</created>
@@ -921,11 +908,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469881684483</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added favicon and list header icons">
+      <created>1469881830590</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1469881830590</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191811000" />
+    <option name="totallyTimeSpent" value="191853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -973,7 +967,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="favicon" />
-    <option name="LAST_COMMIT_MESSAGE" value="favicon" />
+    <MESSAGE value="added favicon and list header icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="added favicon and list header icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

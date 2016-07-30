@@ -1,0 +1,9 @@
+<changelist name="favicon" date="1469881684126" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/favicon/shelved.patch" />
+  <option name="DESCRIPTION" value="favicon" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="public/images/logo_sitters_blue.ico" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/favicon/logo_sitters_blue.ico" />
+  </binary>
+</changelist>
