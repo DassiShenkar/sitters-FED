@@ -185,7 +185,7 @@ export default class Login extends React.Component {
         if(this.state.selectedForm === "sitter" ) {
             sitterForm =
                 <form id="register-form">
-                    <ul className="user-select">
+                    <ul className="login-input-fields">
                         <li>
                             <label className="login-label" for="city">City</label>
                             <input type="text" id="city" ref="city" required placeholder="Tel Aviv"/>
@@ -208,36 +208,40 @@ export default class Login extends React.Component {
                         </li>
                         <li>
                             <label className="login-label" for="hour-fee">Hour Fee</label>
-                            <input className="input age" id="hour-fee"  type="number" placeholder="25"  ref="hourFee"required min="1" max="400"/>
+                            <input className="input age" id="hour-fee"  type="number" placeholder="25$"  ref="hourFee"required min="1" max="400"/>
                         </li>
-                        <label className="login-label">Gender</label>
-                        <li className="user-option">
-                            <label htmlFor="male">Male</label>
-                            <input id="male" value="male" type="radio" checked={this.state.genderFilter === "male"} name="gender-radio" onChange={this.onChangeGender.bind(this, "male")}/>
-                        </li>
-                        <li className="user-option">
-                            <label htmlFor="female">Female</label>
-                            <input id="female" value="female" type="radio" checked={this.state.genderFilter === "female"} name="gender-radio" onChange={this.onChangeGender.bind(this, "female")}/>
-                        </li>
-                        <label className="login-label">Working Hours</label>
-                        <li className="user-option">
-                            <label htmlFor="mornings">Mornings</label>
-                            <input id="mornings" value="mornings" type="radio" checked={this.state.workingHours === "Mornings"} name="hours-radio" onChange={this.onChangeHours.bind(this, "Mornings")}/>
-                        </li>
-                        <li className="user-option">
-                            <label htmlFor="evenings">Evenings</label>
-                            <input id="evenings" value="evenings" type="radio" checked={this.state.workingHours === "Evenings"} name="hours-radio" onChange={this.onChangeHours.bind(this, "Evenings")}/>
-                        </li>
-                        <li className="user-option">
-                            <label htmlFor="allDay">All day</label>
-                            <input id="allDay" value="allDay" type="radio" checked={this.state.workingHours === "All day"} name="hours-radio" onChange={this.onChangeHours.bind(this, "All day")}/>
-                        </li>
+                        <h3>Gender</h3>
+                        <ul className="user-select">
+                            <li className="user-option">
+                                <label htmlFor="male">Male</label>
+                                <input id="male" value="male" type="radio" checked={this.state.genderFilter === "male"} name="gender-radio" onChange={this.onChangeGender.bind(this, "male")}/>
+                            </li>
+                            <li className="user-option">
+                                <label htmlFor="female">Female</label>
+                                <input id="female" value="female" type="radio" checked={this.state.genderFilter === "female"} name="gender-radio" onChange={this.onChangeGender.bind(this, "female")}/>
+                            </li>
+                        </ul>
+                        <h3>Working Hours</h3>
+                        <ul className="user-select">
+                            <li className="user-option">
+                                <label htmlFor="mornings">Mornings</label>
+                                <input id="mornings" value="mornings" type="radio" checked={this.state.workingHours === "Mornings"} name="hours-radio" onChange={this.onChangeHours.bind(this, "Mornings")}/>
+                            </li>
+                            <li className="user-option">
+                                <label htmlFor="evenings">Evenings</label>
+                                <input id="evenings" value="evenings" type="radio" checked={this.state.workingHours === "Evenings"} name="hours-radio" onChange={this.onChangeHours.bind(this, "Evenings")}/>
+                            </li>
+                            <li className="user-option">
+                                <label htmlFor="allDay">All day</label>
+                                <input id="allDay" value="allDay" type="radio" checked={this.state.workingHours === "All day"} name="hours-radio" onChange={this.onChangeHours.bind(this, "All day")}/>
+                            </li>
+                        </ul>
                     </ul>
                     <input type="submit" className="submit-invite" onSubmit={this.handleSubmitSitter} value="Sign In"/>
                 </form>;
         }
         return (
-            <div>
+            <div id="register-page">
                 <section className="invite-info">
                     <Logo/>
                     <h1 className="login-title">Sign In</h1>
