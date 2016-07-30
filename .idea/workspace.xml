@@ -23,9 +23,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="" />
     <ignored path="webpack-heroku.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -370,7 +368,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sitters-ws" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GetSitter" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v4.2.6/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -899,7 +897,7 @@
       <workItem from="1468479622508" duration="73352000" />
       <workItem from="1468662759196" duration="65051000" />
       <workItem from="1469101810948" duration="14123000" />
-      <workItem from="1469881655942" duration="177000" />
+      <workItem from="1469881655942" duration="265000" />
     </task>
     <task id="LOCAL-00001" summary="favicon">
       <created>1469881684483</created>
@@ -919,7 +917,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191853000" />
+    <option name="totallyTimeSpent" value="191941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
