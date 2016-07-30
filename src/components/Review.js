@@ -17,7 +17,7 @@ export default class Review extends React.Component {
                         <div className="icon-container">
                             <Star/>
                         </div>
-                        <section class="review-details">
+                        <section className="review-details">
                             <p className="reviewRating">{review.rating} </p>
                             <p className="reviewName">{review.parentName} </p>
                             <p className="reviewDate">{review.date}</p>

@@ -3,7 +3,6 @@ import ProfileImg from '../components/ProfileImg';
 import FilterList from '../components/FilterList';
 import SitterList from '../components/SitterList';
 import Filter from '../styles/icons/Filter';
-import Bell from '../styles/icons/Bell';
 import '../styles/components/feed.scss';
 
 export default class Feed extends React.Component {

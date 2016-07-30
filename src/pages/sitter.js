@@ -1,5 +1,7 @@
 import React from 'react';
- import InvitesList from '../components/InvitesList';
+import InvitesList from '../components/InvitesList';
+import ProfileImg from '../components/ProfileImg';
+import '../styles/components/sitterHeader.scss';
 
 
 export default class Sitter extends React.Component {
@@ -9,10 +11,8 @@ export default class Sitter extends React.Component {
             invites: []
         }
 
-    }
+        setInterval(this.getSitterDetails.bind(this), 1000);
 
-    componentDidMount() {
-        this.getSitterDetails();
     }
 
     getSitterDetails() {
@@ -23,12 +23,10 @@ export default class Sitter extends React.Component {
             contentType: 'application/json',
             data: JSON.stringify({ 'email': localStorage.email}),
             success: function (data) {
-                this.setState({invites: data.invites,reviews: data.reviews, name: data.name, minAge: data.minAge, hourFee: data.hourFee,
-                    maxAge: data.maxAge, rating: data.rating, sitterEmail: data.email, sitterPicture: data.fullPictureURL});
+                this.setState({invites: data.invites});
                 localStorage.sitterEmail = data.email;
                 localStorage.sitterName = data.name;
-                //this.setState({topSitters: data});
-                //console.log(data);
+                localStorage.sitterProfilePicture = data.profilePictureURL;
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString()); //TODO: remove console.log
@@ -38,15 +36,14 @@ export default class Sitter extends React.Component {
 
     render() {
         return (
-            <div className="sitter-wrapper">
+            <div id="sitter-wrapper">
                 <header>
-                    <section className="profilePicture">
-                        <section className="hello">
+                    <section className="parent-profile">
+                        <ProfileImg profilePicture={localStorage.sitterProfilePicture} username={localStorage.sitterName}/>
+                        <section className="greeting">
                             <p >Hello</p>
-                            <h3 className="sitter-name">{this.state.name}</h3>
-                        </section>
-                        <section className="invitesNumber">
-                            <p >You got {this.state.invites.length} Invites</p>
+                            <h3 className="parent-name">{localStorage.sitterName}</h3>
+                            <p >You have {this.state.invites === null ? 0 : this.state.invites.length} Invites</p>
                         </section>
                     </section>
                 </header>

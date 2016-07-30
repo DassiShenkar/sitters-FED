@@ -1,5 +1,6 @@
 import React from "react";
 import Invite from "./Invite";
+import '../styles/components/inviteTable.scss'
 
 export default class InviteList extends React.Component {
     constructor() {
@@ -9,8 +10,8 @@ export default class InviteList extends React.Component {
     render() {
         const inviteNodes = this.props.allInvites.map((invite, index) => <Invite key={index} inviteData={invite} />);
         return (
-            <div>
-                <table className="table table-hover">
+            <div id="invite-table">
+                <table className="table table-hover table-bordered">
                     <thead>
                         <tr>
                             <th>Street</th>
