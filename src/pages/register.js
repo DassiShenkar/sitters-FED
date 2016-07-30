@@ -149,7 +149,7 @@ export default class Login extends React.Component {
                 <ul className="login-input-fields">
                     <li>
                         <label className="login-label" for="partner">Partner Name</label>
-                        <input type="text" name="partner-name" id="partner" ref="partner" required placeholder="Moshe Levi"/>
+                        <input type="text" name="partner-name" id="partner" ref="partner"  placeholder="Moshe Levi"/>
                     </li>
                     <li>
                         <label className="login-label" for="city">City</label>
@@ -166,25 +166,26 @@ export default class Login extends React.Component {
                     <li>
                         <label className="login-label" for="name">Child Name:</label>
                         <input className="input name" id="name" name="prof1" type="text" placeholder="Beni levi"
-                               data-items="8" ref="childName" required/>
+                               ref="childName" required/>
                     </li>
                     <li>
-                        <label className="login-label" or="age">Age</label>
-                        <input className="input age" id="age" name="prof1" type="number" placeholder="3" data-items="8" ref="childAge" required min="0" max="120"/>
+                        <label className="login-label" for="age">Child Age</label>
+                        <input className="input age" id="age" name="prof1" type="number" placeholder="3" ref="childAge" required min="0" max="12"/>
                     </li>
                     <li>
                         <label className="login-label" for="allergies">Allergies</label>
                         <input className="input allergies" id="allergies" name="prof1" type="text"
-                               placeholder="avocado,bamba" ref="childAllergies" required/>
+                               placeholder="avocado,bamba" ref="childAllergies" />
                     </li>
                 </ul>
-                <a className="submit-invite" onClick={this.handleSubmitParent}>Sign In</a>
+                <input type="submit" className="submit-invite" onSubmit={this.handleSubmitParent} value="Sign In"/>
+
             </form>;
         }
         if(this.state.selectedForm === "sitter" ) {
             sitterForm =
                 <form id="register-form">
-                    <ul className="login-input-fields">
+                    <ul className="user-select">
                         <li>
                             <label className="login-label" for="city">City</label>
                             <input type="text" id="city" ref="city" required placeholder="Tel Aviv"/>
@@ -199,42 +200,40 @@ export default class Login extends React.Component {
                         </li>
                         <li>
                             <label className="login-label" for="min-age">Minimum Age</label>
-                            <input className="input name" id="min-age"  type="number" placeholder="1" ref="minAge" required min="0" max="120"/>
+                            <input className="input name" id="min-age"  type="number" placeholder="1" ref="minAge" required min="0" max="12"/>
                         </li>
                         <li>
                             <label className="login-label" for="max-age">Maximum Age</label>
-                            <input className="input age" id="max-age"  type="number" placeholder="4"  ref="maxAge" required min="0" max="120"/>
+                            <input className="input age" id="max-age"  type="number" placeholder="4"  ref="maxAge" required min="0" max="12"/>
                         </li>
                         <li>
                             <label className="login-label" for="hour-fee">Hour Fee</label>
                             <input className="input age" id="hour-fee"  type="number" placeholder="25"  ref="hourFee"required min="1" max="400"/>
                         </li>
-                        <li className="filter-option">
+                        <label className="login-label">Gender</label>
+                        <li className="user-option">
                             <label htmlFor="male">Male</label>
                             <input id="male" value="male" type="radio" checked={this.state.genderFilter === "male"} name="gender-radio" onChange={this.onChangeGender.bind(this, "male")}/>
                         </li>
-                        <li className="filter-option">
+                        <li className="user-option">
                             <label htmlFor="female">Female</label>
                             <input id="female" value="female" type="radio" checked={this.state.genderFilter === "female"} name="gender-radio" onChange={this.onChangeGender.bind(this, "female")}/>
                         </li>
-
-                        <li className="filter-option">
+                        <label className="login-label">Working Hours</label>
+                        <li className="user-option">
                             <label htmlFor="mornings">Mornings</label>
                             <input id="mornings" value="mornings" type="radio" checked={this.state.workingHours === "Mornings"} name="hours-radio" onChange={this.onChangeHours.bind(this, "Mornings")}/>
                         </li>
-                        <li className="filter-option">
+                        <li className="user-option">
                             <label htmlFor="evenings">Evenings</label>
                             <input id="evenings" value="evenings" type="radio" checked={this.state.workingHours === "Evenings"} name="hours-radio" onChange={this.onChangeHours.bind(this, "Evenings")}/>
                         </li>
-                        <li className="filter-option">
+                        <li className="user-option">
                             <label htmlFor="allDay">All day</label>
                             <input id="allDay" value="allDay" type="radio" checked={this.state.workingHours === "All day"} name="hours-radio" onChange={this.onChangeHours.bind(this, "All day")}/>
                         </li>
                     </ul>
-                   <a className="submit-invite" onClick={this.handleSubmitSitter}>
-                       <input type="submit"/>
-                       Sign In
-                   </a>
+                    <input type="submit" className="submit-invite" onSubmit={this.handleSubmitSitter} value="Sign In"/>
                 </form>;
         }
         return (
@@ -243,8 +242,8 @@ export default class Login extends React.Component {
                     <Logo/>
                     <h1 className="login-title">Sign In</h1>
                 </section>
-                <ul>
-                    <li className="filter-option">
+                <ul className="user-select">
+                    <li className="user-option">
                         <label htmlFor="parentRadio">I'm a Parent</label>
                         <input id="parentRadio" value="parent" type="radio" checked={this.state.selectedForm === "parent"} name="radio-register"  onChange={this.onChange.bind(this, "sitter")} />
                     </li>
