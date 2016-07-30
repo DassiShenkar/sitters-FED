@@ -23,18 +23,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="added icons">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/shelf/fff.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/shelf/fff/shelved.patch" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shelf/favicon.xml" afterPath="$PROJECT_DIR$/.idea/shelf/favicon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shelf/iconsetc.xml" afterPath="$PROJECT_DIR$/.idea/shelf/iconsetc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shelf/ws.xml" afterPath="$PROJECT_DIR$/.idea/shelf/ws.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bundle.js" afterPath="$PROJECT_DIR$/public/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bundle.js.map" afterPath="$PROJECT_DIR$/public/bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/register.js" afterPath="$PROJECT_DIR$/src/pages/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.prod.config.js" afterPath="$PROJECT_DIR$/webpack.prod.config.js" />
-    </list>
+    <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="" />
     <ignored path="webpack-heroku.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -55,6 +44,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="95" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="95" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/register.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,16 +71,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inviteTable.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/components/inviteTable.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -109,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FilterList.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FilterList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/FilterList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="357">
               <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -146,8 +135,8 @@
       <file leaf-file-name="webpack.prod.config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack.prod.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+            <state relative-caret-position="238">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -195,7 +184,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/node_modules/react-date-picker/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/ProfileImg.js" />
-        <option value="$PROJECT_DIR$/webpack.prod.config.js" />
         <option value="$PROJECT_DIR$/webpack.dev.config.js" />
         <option value="$PROJECT_DIR$/src/styles/components/sendInvite.scss" />
         <option value="$PROJECT_DIR$/src/components/ReviewList.js" />
@@ -236,6 +224,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/pages/feed.js" />
         <option value="$PROJECT_DIR$/src/components/FilterList.js" />
+        <option value="$PROJECT_DIR$/webpack.prod.config.js" />
       </list>
     </option>
   </component>
@@ -926,7 +915,7 @@
       <workItem from="1468662759196" duration="65051000" />
       <workItem from="1469101810948" duration="14123000" />
       <workItem from="1469881655942" duration="135000" />
-      <workItem from="1469883350267" duration="11404000" />
+      <workItem from="1469883350267" duration="11677000" />
     </task>
     <task id="LOCAL-00001" summary="favicon">
       <created>1469881684483</created>
@@ -949,11 +938,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469895108324</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed bundle">
+      <created>1469895382344</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1469895382344</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203215000" />
+    <option name="totallyTimeSpent" value="203488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -1003,7 +999,8 @@
     <MESSAGE value="favicon" />
     <MESSAGE value="styling of invite" />
     <MESSAGE value="added icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="added icons" />
+    <MESSAGE value="fixed bundle" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bundle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,14 +1009,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="95" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-date-picker/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1329,14 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.prod.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -1385,11 +1366,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/FilterList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="357">
           <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.prod.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="95" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="95" />
+          <folding />
         </state>
       </provider>
     </entry>
