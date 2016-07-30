@@ -18,7 +18,8 @@ export default class FilterList extends React.Component {
             topSitters: null,
             sittersByGender: null,
             sittersByHours: null,
-            allSitters: null
+            allSitters: null,
+            test : null // TODO: remove
         }
     }
 
