@@ -1,7 +1,7 @@
 import React from "react";
 import StarRatingComponent from 'react-star-rating-component';
 import SitterList from '../components/SitterList';
-import '../styles/components/filters.scss';
+import '../styles/components/filterList.scss';
 
 export default class FilterList extends React.Component {
 
@@ -9,17 +9,15 @@ export default class FilterList extends React.Component {
         super();
         this.state = {
             selectedFilter: "availableNow",
-            subFilter: "mornings",
+            hoursFilter: "mornings",
             genderFilter: "female",
             rating: 5,
-            workingHours: "mornings",
             availableSitters: null,
             favoriteSitters: null,
             topSitters: null,
             sittersByGender: null,
             sittersByHours: null,
             allSitters: null,
-            test : null // TODO: remove
         }
     }
 
@@ -145,15 +143,15 @@ export default class FilterList extends React.Component {
                 this.loadAllSittersFromServer();
                 break;
             case "mornings":
-                this.setState({subFilter: "mornings"});
+                this.setState({hoursFilter: "mornings"});
                 this.loadByWorkingHours("Mornings");
                 break;
             case "evenings":
-                this.setState({subFilter: "evenings"});
+                this.setState({hoursFilter: "evenings"});
                 this.loadByWorkingHours("Evenings");
                 break;
             case "allDay":
-                this.setState({subFilter: "allDay"});
+                this.setState({hoursFilter: "allDay"});
                 this.loadByWorkingHours("All day");
                 break;
             case "male":
@@ -235,15 +233,15 @@ export default class FilterList extends React.Component {
                     <ul>
                         <li className="filter-option">
                             <label htmlFor="morning">Mornings</label>
-                            <input id="morning" value="morning" type="radio" checked={this.state.subFilter === "mornings"} name="working-hours-radio" onChange={this.onChange.bind(this, "mornings")}/>
+                            <input id="morning" value="morning" type="radio" checked={this.state.hoursFilter === "mornings"} name="working-hours-radio" onChange={this.onChange.bind(this, "mornings")}/>
                         </li>
                         <li className="filter-option">
                             <label htmlFor="evening">Evenings</label>
-                            <input id="evening" value="evening" type="radio" checked={this.state.subFilter === "evenings"} name="working-hours-radio" onChange={this.onChange.bind(this, "evenings")}/>
+                            <input id="evening" value="evening" type="radio" checked={this.state.hoursFilter === "evenings"} name="working-hours-radio" onChange={this.onChange.bind(this, "evenings")}/>
                         </li>
                         <li className="filter-option">
                             <label htmlFor="all-day">All day</label>
-                            <input id="all-day" value="all-day" type="radio" checked={this.state.subFilter === "allDay"} name="working-hours-radio" onChange={this.onChange.bind(this, "allDay")}/>
+                            <input id="all-day" value="all-day" type="radio" checked={this.state.hoursFilter === "allDay"} name="working-hours-radio" onChange={this.onChange.bind(this, "allDay")}/>
                         </li>
                     </ul>
                 </section> : null}
