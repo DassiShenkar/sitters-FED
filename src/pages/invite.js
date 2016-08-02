@@ -8,20 +8,21 @@ import '../styles/components/invite.scss'
 export default class Invite extends React.Component {
     constructor() {
         super();
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             reoccurring: "none",
             msg: "",
             allergies: "apple, banana",
             personalMsg: "",
-            startDate: "",
-            endDate: "",
+            startDate: "2016-07-17 16:50",
+            endDate: "2016-07-17 16:50",
             date: "2016-07-17 16:50",
             format: "YYYY-MM-DD HH:mm",
             inputFormat: "DD/MM/YYYY HH:mm",
             mode: "dateTime"
         };
-            localStorage.startDate = "2016-07-17 16:50";
-            this.handleSubmit = this.handleSubmit.bind(this);
+            localStorage.startDate = this.state.startDate;
+            localStorage.endDate = this.state.endDate;
             this.handleAllergiesChange = this.handleAllergiesChange.bind(this);
             this.handleMsgChange = this.handleMsgChange.bind(this);
             this.handleStartTimeChange = this.handleStartTimeChange.bind(this);
@@ -32,7 +33,8 @@ export default class Invite extends React.Component {
         this.setState({reoccurring: reoccurring});
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
+        e.preventDefault();
         const allergiesList = this.state.allergies.split(',');
         $.ajax({
             url: 'https://sitters-ws.herokuapp.com/insertInvite',
@@ -96,7 +98,7 @@ export default class Invite extends React.Component {
                     <h3 className="child-name">{localStorage.childName}</h3>
                 </section>
             </header>
-            <form className="commentForm">
+            <form className="commentForm" onSubmit={this.handleSubmit}>
                 <section className="invite-icon-list">
                     <section className="invite-icon">
                         <Calendar/>
@@ -115,24 +117,23 @@ export default class Invite extends React.Component {
                     <h4 className="rec-title">Reoccurring</h4>
                     <ul className="reccur-radio">
                         <li>
-                            <input id="none" className="radio-inline" value="none" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "none")}/>
+                            <input id="none" className="radio-inline" value="none" type="radio" name="reoccurring" checked={this.state.reoccurring === "none"} onChange={this.onChange.bind(this, "none")}/>
                             <label htmlFor="none">None</label>
                         </li>
                         <li>
-                            <input id="weekly" className="radio-inline" value="weekly" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "weekly")}/>
+                            <input id="weekly" className="radio-inline" value="weekly" type="radio" name="reoccurring" checked={this.state.reoccurring === "weekly"} onChange={this.onChange.bind(this, "weekly")}/>
                             <label htmlFor="weekly">Weekly</label>
                         </li>
                         <li>
-                            <input id="monthly" className="radio-inline" value="monthly" type="radio" name="reoccurring" onChange={this.onChange.bind(this, "monthly")}/>
+                            <input id="monthly" className="radio-inline" value="monthly" type="radio" name="reoccurring" checked={this.state.reoccurring === "monthly"} onChange={this.onChange.bind(this, "monthly")}/>
                             <label htmlFor="monthly">Monthly</label>
                         </li>
                     </ul>
                 </section>
-                <textarea value={allergies} onChange={this.handleAllergiesChange} name="allergies" placeholder="enter allergy details" id="aller" cols="1" rows="1"/>
-                <textarea name="msg" onChange={this.handleMsgChange} placeholder="write a personal message" id="msg" cols="1" rows="4"/>
+                <textarea value={allergies} onChange={this.handleAllergiesChange} name="allergies" placeholder="enter allergy details" id="aller" cols="1" rows="1" required/>
+                <textarea name="msg" onChange={this.handleMsgChange} placeholder="write a personal message" id="msg" cols="1" rows="4" required/>
+                <input type="submit" className="submit-invite"  value="Sign In"/>
             </form>
-
-                <a className="submit-invite" onClick={this.handleSubmit}>Send Invitation</a>
 
         </section>
         );

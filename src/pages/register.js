@@ -144,7 +144,7 @@ export default class Login extends React.Component {
         let parentForm,sitterForm;
         if(this.state.selectedForm === "parent") {
             parentForm =
-            <form id="register-form">
+            <form id="register-form" onSubmit={this.handleSubmitParent}>
 
                 <ul className="login-input-fields">
                     <li>
@@ -178,13 +178,13 @@ export default class Login extends React.Component {
                                placeholder="avocado,bamba" ref="childAllergies" />
                     </li>
                 </ul>
-                <input type="submit" className="submit-invite" onSubmit={this.handleSubmitParent} value="Sign In"/>
+                <input type="submit" className="submit-invite"  value="Sign In"/>
 
             </form>;
         }
         if(this.state.selectedForm === "sitter" ) {
             sitterForm =
-                <form id="register-form">
+                <form id="register-form" onSubmit={this.handleSubmitSitter}>
                     <ul className="login-input-fields">
                         <li>
                             <label className="login-label" for="city">City</label>
@@ -237,7 +237,7 @@ export default class Login extends React.Component {
                             </li>
                         </ul>
                     </ul>
-                    <input type="submit" className="submit-invite" onSubmit={this.handleSubmitSitter} value="Sign In"/>
+                    <input type="submit" className="submit-invite"  value="Sign In"/>
                 </form>;
         }
         return (
