@@ -1,6 +1,6 @@
 import React from "react";
-import Invite from "./Invite";
-import '../styles/components/inviteTable.scss'
+import Invite from "./InviteRow";
+import '../styles/components/inviteList.scss'
 
 export default class InviteList extends React.Component {
     constructor() {

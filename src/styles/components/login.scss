@@ -43,7 +43,7 @@
   padding: 0;
 }
 
-#register-form a:hover, #register-form a:focus{
+#register-form a:hover, #register-form a:focus {
   text-decoration: none;
   color: $white;
   cursor: pointer;
@@ -58,19 +58,19 @@
 }
 
 .user-select label {
-  font-family: Avenir-Light, Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Avenir-Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 72px;
   flex: 1;
 }
 
-.user-option label{
+.user-option label {
   font-size: 32px;
 }
 
 #register-form h3 {
   color: $pink;
-  font-size: 25px;
+  font-size: 28px;
   text-align: center;
 }
 

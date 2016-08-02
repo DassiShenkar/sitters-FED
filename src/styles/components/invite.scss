@@ -101,7 +101,7 @@
   margin: 0;
 }
 
-textarea[name="allergies"] , textarea[name="msg"], input[type="text"], input[type="number"]{
+textarea[name="allergies"], textarea[name="msg"], input[type="text"], input[type="number"] {
   resize: none;
   display: block;
   width: 80%;
@@ -115,10 +115,27 @@ textarea[name="allergies"] , textarea[name="msg"], input[type="text"], input[typ
   margin-bottom: 60px;
 }
 
-.invite-page a:hover, .invite-page a:focus{
+textarea[name="allergies"], textarea[name="msg"] {
+  width: 100%;
+}
+
+.invite-page a:hover, .invite-page a:focus {
   text-decoration: none;
-  color:$white;
+  color: $white;
   cursor: pointer;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.textarea-invite {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.commentForm {
+  margin-bottom: 0;
 }
 
 

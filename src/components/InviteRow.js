@@ -4,10 +4,9 @@ export default class Invite extends React.Component {
     constructor() {
         super();
     }
-
     render() {
         const invite = this.props.inviteData;
-        let allergies = invite.allergies  != null? invite.allergies.join : null;
+        let allergies = invite.allergies  != null? invite.allergies.join() : null;
         return (
                 <tr>
                     <td>{invite.street}</td>

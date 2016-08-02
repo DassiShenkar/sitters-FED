@@ -1,13 +1,12 @@
 import React from 'react';
 import ReviewList from "../components/ReviewList";
-import '../styles/components/sitterProfile.scss';
+import '../styles/components/sitterPage.scss';
 import Dollar from '../styles/icons/Dollar';
 import Star from '../styles/icons/Star';
 import Family from '../styles/icons/Family';
 import Envelope from '../styles/icons/Envelope';
 
 export default class SitterProfile extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {reviews: [], email: this.props.params.sitter, name: "", minAge: 0, hourFee: "",

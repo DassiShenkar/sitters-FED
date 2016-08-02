@@ -3,16 +3,13 @@ import InvitesList from '../components/InvitesList';
 import ProfileImg from '../components/ProfileImg';
 import '../styles/components/sitterHeader.scss';
 
-
 export default class Sitter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             invites: []
-        }
-
+        };
         setInterval(this.getSitterDetails.bind(this), 1000);
-
     }
 
     getSitterDetails() {
@@ -29,7 +26,7 @@ export default class Sitter extends React.Component {
                 localStorage.sitterProfilePicture = data.profilePictureURL;
             }.bind(this),
             error: function(xhr, status, err) {
-                console.error(this.props.url, status, err.toString()); //TODO: remove console.log
+                console.error(this.props.url, status, err.toString());
             }.bind(this)
         });
     }

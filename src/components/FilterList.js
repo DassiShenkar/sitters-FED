@@ -9,7 +9,7 @@ export default class FilterList extends React.Component {
         super();
         this.state = {
             selectedFilter: "availableNow",
-            hoursFilter: "mornings",
+            hoursFilter: "allDay",
             genderFilter: "female",
             rating: 5,
             availableSitters: null,
@@ -62,7 +62,7 @@ export default class FilterList extends React.Component {
                 this.setState({topSitters: data});
             }.bind(this),
             error: function(xhr, status, err) {
-                console.error(this.props.url, status, err.toString()); //TODO: remove console.log
+                console.error(this.props.url, status, err.toString());
             }.bind(this)
         });
     }
@@ -78,7 +78,7 @@ export default class FilterList extends React.Component {
                 this.setState({favoriteSitters: data});
             }.bind(this),
             error: function(xhr, status, err) {
-                console.error(this.props.url, status, err.toString()); //TODO: remove console.log
+                console.error(this.props.url, status, err.toString());
             }.bind(this)
         });
     }
@@ -94,7 +94,7 @@ export default class FilterList extends React.Component {
                 this.setState({sittersByHours: data});
             }.bind(this),
             error: function(xhr, status, err) {
-                console.error(this.props.url, status, err.toString()); //TODO: remove console.log
+                console.error(this.props.url, status, err.toString());
             }.bind(this)
         });
     }
@@ -110,7 +110,7 @@ export default class FilterList extends React.Component {
                 this.setState({sittersByGender: data});
             }.bind(this),
             error: function(xhr, status, err) {
-                console.error(this.props.url, status, err.toString()); //TODO: remove console.log
+                console.error(this.props.url, status, err.toString());
             }.bind(this)
         });
     }
@@ -163,9 +163,7 @@ export default class FilterList extends React.Component {
                 this.loadSittersByGender("female");
                 break;
         }
-
     }
-
 
     onStarClick(name, value) {
         this.setState({rating: value});

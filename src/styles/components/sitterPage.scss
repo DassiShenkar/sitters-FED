@@ -1,7 +1,7 @@
 @import "review.scss";
 @import "../colors";
 
-.sitter-wrapper a:hover, a:focus{
+.sitter-wrapper a:hover, a:focus {
   text-decoration: none;
   color: $white;
 }
@@ -10,22 +10,23 @@ img.fullPicture {
   border: 6px solid $white;
 }
 
-.profilePicture p{
+.profilePicture p {
   font-family: "Avenir-book", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 35px;
 }
 
-.profilePicture h3{
+.profilePicture h3 {
   font-family: "Avenir-heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 50px;
 }
 
-.knowMore p{
+.knowMore p {
   font-family: "Avenir-heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 42px;
   flex: 1;
 }
-.knowMore a{
+
+.knowMore a {
   font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 30px;
   text-decoration: none;
@@ -33,19 +34,19 @@ img.fullPicture {
   padding-top: 12px;
 }
 
-.profilePicture{
+.profilePicture {
   padding-top: 50px;
   margin: 0 5.3%;
   padding-bottom: 40px;
 }
 
-.knowMore{
+.knowMore {
   display: flex;
   flex-direction: row;
   margin-top: 283px;
 }
 
-.sitterDetails{
+.sitterDetails {
   width: 750px;
   height: 283px;
   background: #444444;
@@ -55,9 +56,9 @@ img.fullPicture {
   transform: scale(-1, 1);
 }
 
-.sitter-header{
+.sitter-header {
   width: 750px;
-  height : 545px;
+  height: 545px;
 }
 
 .sitterInfo {
@@ -105,18 +106,18 @@ img.fullPicture {
 .parent-picture {
   width: 145px;
   height: 145px;
+  border-radius: 50%;
 }
 
-
 .contact-sitter {
-  height:100px;
-  margin:0px auto;
-  margin-top:100px;
+  height: 100px;
+  margin: 0px auto;
+  margin-top: 100px;
   text-align: center;
 }
 
-.contact-sitter svg{
-  width:100px;
+.contact-sitter svg {
+  width: 100px;
   margin: auto;
   display: block;
 }
@@ -128,11 +129,11 @@ img.fullPicture {
 
 }
 
-.contact-sitter a:visited{
+.contact-sitter a:visited {
   color: $pink;
 }
 
-.contact-sitter a:hover{
+.contact-sitter a:hover {
   color: $dark-pink;
 }
 
@@ -142,12 +143,11 @@ img.fullPicture {
   font-family: "Avenir-heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
 .submit-invite {
-  font-size:40px;
+  font-size: 40px;
   font-family: "Avenir-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: $white;
-  margin-top:106px;
+  margin-top: 106px;
   background: $pink;
   display: block;
   text-align: center;
@@ -163,8 +163,7 @@ section.review-list {
   color: #6b6f74;
 }
 
-
-#sitter-profile-icons{
+#sitter-profile-icons {
   margin: 75px auto;
 }
 
