@@ -25,8 +25,6 @@
   <component name="ChangeListManager">
     <list default="true" id="32cf7e70-8828-4420-94b1-21a0b9473240" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bundle.js" afterPath="$PROJECT_DIR$/public/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bundle.js.map" afterPath="$PROJECT_DIR$/public/bundle.js.map" />
     </list>
     <ignored path="webpack-heroku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,34 +47,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="invite.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/components/invite.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/components/login.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3120">
-              <caret line="212" column="29" selection-start-line="212" selection-start-column="29" selection-end-line="212" selection-end-column="29" />
+            <state relative-caret-position="3075">
+              <caret line="209" column="29" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1470167321000" expanded="true" signature="2763:2949" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -95,8 +72,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -105,8 +82,8 @@
       <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            <state relative-caret-position="15">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -120,28 +97,6 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sitter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/sitter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inviteTable.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/components/inviteTable.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -370,8 +325,15 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/index.js</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/FilterList.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/InvitesList.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pages/invite.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pages/login.js</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pages/register.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/feed.scss</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/invite.scss</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/login.scss</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -379,6 +341,13 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/InviteRow.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pages/sitterPage.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pages/sitterProfile.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/filterList.scss</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/inviteList.scss</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/sitterPage.scss</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/utils/cloudinary.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -386,6 +355,13 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/Invite.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pages/cloudinary.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pages/sitter.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pages/sitters.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/filters.scss</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/inviteTable.scss</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/styles/components/sitterProfile.scss</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -975,7 +951,7 @@
       <workItem from="1469101810948" duration="14123000" />
       <workItem from="1469881655942" duration="265000" />
       <workItem from="1469896493864" duration="4287000" />
-      <workItem from="1470160722549" duration="572000" />
+      <workItem from="1470160722549" duration="1705000" />
     </task>
     <task id="LOCAL-00001" summary="favicon">
       <created>1469881684483</created>
@@ -995,7 +971,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196800000" />
+    <option name="totallyTimeSpent" value="197933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1339,9 +1315,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1363,8 +1337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1379,11 +1353,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
-          <caret line="212" column="29" selection-start-line="212" selection-start-column="29" selection-end-line="212" selection-end-column="29" />
+        <state relative-caret-position="3075">
+          <caret line="209" column="29" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1470167321000" expanded="true" signature="2763:2949" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1398,8 +1371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        <state relative-caret-position="285">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding />
         </state>
       </provider>
