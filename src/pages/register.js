@@ -73,6 +73,7 @@ export default class Login extends React.Component {
                 workingHours : sitterInput.workingHours,
                 gender : sitterInput.gender,
                 profilePictureURL: localStorage.profilePicture,
+                fullPictureURL: 'https://res.cloudinary.com/sitters/image/upload/v1467899701/qf2hc1imu7zlro02uit0.png',
                 address: {
                     city: sitterInput.city.value,
                     street: sitterInput.street.value,

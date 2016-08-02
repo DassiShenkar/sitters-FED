@@ -168,6 +168,7 @@ export default class FilterList extends React.Component {
 
     }
 
+
     onStarClick(name, value) {
         this.setState({rating: value});
         this.loadTopSittersFromServer();
