@@ -108,7 +108,6 @@ export default class Login extends React.Component {
             contentType: 'application/json',
             data: JSON.stringify({
                 name: localStorage.name,
-                // password: localStorage.token,
                 email: localStorage.email,
                 profilePictureURL: localStorage.profilePicture,
                 partner: parentInput.partner.value,

@@ -39,7 +39,7 @@ export default class Sitter extends React.Component {
                         <ProfileImg profilePicture={localStorage.sitterProfilePicture} username={localStorage.sitterName}/>
                         <section className="greeting">
                             <p >Hello</p>
-                            <h3 className="parent-name">{localStorage.sitterName}</h3>
+                            <h3 className="parent-name">{localStorage.name}</h3>
                             <p >You have {this.state.invites === null ? 0 : this.state.invites.length} Invites</p>
                         </section>
                     </section>
