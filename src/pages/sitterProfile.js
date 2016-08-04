@@ -9,7 +9,7 @@ export default class Sitter extends React.Component {
         this.state = {
             invites: []
         };
-        setInterval(this.getSitterDetails.bind(this), 1000);
+        setInterval(this.getSitterDetails.bind(this), 60000);
     }
 
     getSitterDetails() {
